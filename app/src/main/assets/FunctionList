@@ -1,0 +1,15 @@
+### 已完成
+1.AB测试
+2.品牌判断（已完成：MIUI，未完成：OPPO、Vivo、华为等）
+3.dp转像素
+4.md5生成
+5.Android Id
+
+### 未完成
+1.新用户
+2.用户安装时间
+3.转态栏渐变
+4.开屏全屏
+5.判断是否在桌面（https://blog.csdn.net/LoveDou0816/article/details/77983400）LauncherChecker.isLauncher
+6.获取ROM名称和版本号
+7.编包时生成时间戳

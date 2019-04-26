@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">DeveloperRepository</string>
+
+    <!-- DateUtils -->
+    <string name="today">今天</string>
+    <string name="yesterday">昨天</string>
+    <string name="unknown_app_install_date">未知</string>
+    <string name="date_unit_day">%s天</string>
+    <string name="date_unit_hour">%s小时</string>
+    <string name="date_unit_minute">%s分钟</string>
+    <string name="date_unit_second">%s秒</string>
+
+    <!-- LanguageCountry -->
+    <string name="settings_language_ar">العربية</string>
+    <string name="settings_language_bg">България</string>
+    <string name="settings_language_cs">Čeština</string>
+    <string name="settings_language_da">Dansk</string>
+    <string name="settings_language_hi">हिन्दी</string>
+    <string name="settings_language_de">Deutsch</string>
+    <string name="settings_language_el">Eλληνικά</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_language_es">Español (España)</string>
+    <string name="settings_language_es_us">Español (Estados Unidos)</string>
+    <string name="settings_language_fr">Français</string>
+    <string name="settings_language_he">עברית</string>
+    <string name="settings_language_hr">Hrvatski</string>
+    <string name="settings_language_hu">Magyar</string>
+    <string name="settings_language_id">Indonesia</string>
+    <string name="settings_language_it">Italiano</string>
+    <string name="settings_language_ja">日本語</string>
+    <string name="settings_language_ko">한국어</string>
+    <string name="settings_language_ms">Malay</string>
+    <string name="settings_language_nb">Norsk</string>
+    <string name="settings_language_nl">Nederlands</string>
+    <string name="settings_language_pl">Polski</string>
+    <string name="settings_language_pt">Português (Portugal)</string>
+    <string name="settings_language_pt_br">Português (Brasil)</string>
+    <string name="settings_language_ro">Română</string>
+    <string name="settings_language_ru">Pусский</string>
+    <string name="settings_language_sk">Slovenčina</string>
+    <string name="settings_language_sr">Cрпски</string>
+    <string name="settings_language_th">ภาษาไทย</string>
+    <string name="settings_language_tr">Türkçe</string>
+    <string name="settings_language_uk">Українська</string>
+    <string name="settings_language_vi">Tiếng Việt</string>
+    <string name="settings_language_zh_cn">中文 (简体)</string>
+    <string name="settings_language_zh_tw">中文 (繁體)</string>
+
+</resources>

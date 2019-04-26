@@ -1,0 +1,33 @@
+### 1.重载和重写的概念和区别
+
+重写是不同类
+重载是同一类
+
+### 2.抽象类和接口的区别，及应用场景，在声明的变量和方法上有什么异同
+
+工厂方法需要用抽象类，接口用于多态
+
+### 3.线程和线程池
+
+定时任务、如何关闭线程池？
+
+### 3.设计模式
+
+#### 1. 代理模式
+
+https://blog.csdn.net/gdutxiaoxu/article/details/81394050
+
+### 4.Java 内部类为什么可以引用外部类？
+
+- 内部类对象的创建依赖于外部类对象
+- 内部类对象持有指向外部类对象的引用
+
+参考链接：https://blog.csdn.net/zhangjg_blog/article/details/20000769
+
+### 5. Java 反射
+
+https://blog.csdn.net/gdutxiaoxu/article/details/68947735
+
+
+
+

@@ -1,0 +1,78 @@
+package com.trampcr.developerrepository.window;
+
+import android.content.Context;
+import android.view.View;
+import android.view.WindowManager;
+
+/**
+ * 悬浮窗管理类
+ * Created by trampcr on 2019/4/11.
+ */
+
+public class FloatWindowManager {
+    private WindowManager mWindowManager;
+    private static FloatWindowManager mInstance;
+    private Context mContext;
+
+    public static FloatWindowManager getInstance(Context context) {
+        if (mInstance == null) {
+            mInstance = new FloatWindowManager(context);
+        }
+        return mInstance;
+    }
+
+    private FloatWindowManager(Context context) {
+        mContext = context;
+        mWindowManager = (WindowManager) mContext.getSystemService(Context.WINDOW_SERVICE);//获得WindowManager对象
+    }
+
+    /**
+     * 添加悬浮窗
+     *
+     * @param view
+     * @param params
+     * @return
+     */
+    protected boolean addView(View view, WindowManager.LayoutParams params) {
+        try {
+            mWindowManager.addView(view, params);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    /**
+     * 移除悬浮窗
+     *
+     * @param view
+     * @return
+     */
+    protected boolean removeView(View view) {
+        try {
+            mWindowManager.removeView(view);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    /**
+     * 更新悬浮窗参数
+     *
+     * @param view
+     * @param params
+     * @return
+     */
+    protected boolean updateView(View view, WindowManager.LayoutParams params) {
+        try {
+            mWindowManager.updateViewLayout(view, params);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+}
