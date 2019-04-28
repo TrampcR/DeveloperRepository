@@ -4,7 +4,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <com.trampcr.developerrepository.customview.PieView
+    <com.trampcr.developerrepository.customview.BitmapView
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

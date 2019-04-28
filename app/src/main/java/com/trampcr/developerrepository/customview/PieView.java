@@ -42,15 +42,14 @@ public class PieView extends View {
         int startAngle = 0;
         for (int i = 0; i < mAngleArr.length; i++) {
             mPiePaint.setColor(mColorArr[i]);
+            canvas.save();
             if (mStandOutNum == i) {
-                canvas.save();
                 canvas.translate((float) (MOVE_DISTANCE * Math.cos(Math.toRadians(startAngle + mAngleArr[i] / 2))),
                         (float) (MOVE_DISTANCE * Math.sin(Math.toRadians(startAngle + mAngleArr[i] / 2))));
-                canvas.drawArc(mPieRectF, startAngle, mAngleArr[i], true, mPiePaint);
-                canvas.restore();
-            } else {
-                canvas.drawArc(mPieRectF, startAngle, mAngleArr[i], true, mPiePaint);
             }
+
+            canvas.drawArc(mPieRectF, startAngle, mAngleArr[i], true, mPiePaint);
+            canvas.restore();
             startAngle += mAngleArr[i];
         }
     }
