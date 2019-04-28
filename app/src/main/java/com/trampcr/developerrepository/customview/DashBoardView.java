@@ -10,8 +10,9 @@ import android.graphics.PathMeasure;
 import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
+
+import com.trampcr.developerrepository.utils.DimenUtils;
 
 /**
  * Created by trampcr on 2019/1/9.
@@ -22,8 +23,8 @@ public class DashBoardView extends View{
     public static final float ARC_ANGLE = 120;
     public static final float RIGHT_ANGLE = 90;
     public static final float CIRCLE_ANGLE = 360;
-    public static final float RADIUS = ViewUtils.dp2px(100);
-    public static final float POINTER_LEN = ViewUtils.dp2px(80);
+    public static final float RADIUS = DimenUtils.dp2px(100);
+    public static final float POINTER_LEN = DimenUtils.dp2px(80);
 
     private Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private RectF mArcRectF = new RectF();
@@ -39,12 +40,12 @@ public class DashBoardView extends View{
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
         mPaint.setStyle(Paint.Style.STROKE);
-        mPaint.setStrokeWidth(ViewUtils.dp2px(2));
+        mPaint.setStrokeWidth(DimenUtils.dp2px(2));
         mArcRectF.set(getWidth() / 2 - RADIUS, getHeight() / 2 - RADIUS, getWidth() / 2 + RADIUS, getHeight() / 2 + RADIUS);
-        mDashPath.addRect(0, 0, ViewUtils.dp2px(2), ViewUtils.dp2px(10), Path.Direction.CW);
+        mDashPath.addRect(0, 0, DimenUtils.dp2px(2), DimenUtils.dp2px(10), Path.Direction.CW);
         mArcPath.addArc(mArcRectF, ARC_ANGLE + (RIGHT_ANGLE - ARC_ANGLE / 2), CIRCLE_ANGLE - ARC_ANGLE);
         PathMeasure arcPathMeasure = new PathMeasure(mArcPath, false);
-        mDashPathEffect = new PathDashPathEffect(mDashPath, (arcPathMeasure.getLength() - ViewUtils.dp2px(2)) / 20, 0,
+        mDashPathEffect = new PathDashPathEffect(mDashPath, (arcPathMeasure.getLength() - DimenUtils.dp2px(2)) / 20, 0,
                 PathDashPathEffect.Style.ROTATE);
     }
 

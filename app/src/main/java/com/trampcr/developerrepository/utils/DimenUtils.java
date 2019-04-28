@@ -15,7 +15,7 @@ public class DimenUtils {
      * @param dp 尺寸大小
      * @return px 像素大小
      */
-    public static float dp2Px(float dp) {
+    public static float dp2px(float dp) {
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, Resources.getSystem().getDisplayMetrics());
     }
 }

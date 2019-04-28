@@ -13,8 +13,8 @@ import com.trampcr.developerrepository.utils.DimenUtils;
 
 public class PieView extends View {
     public static final String TAG = PieView.class.getSimpleName();
-    private static final float PIE_RADIUS = DimenUtils.dp2Px(100);
-    private static final float MOVE_DISTANCE = DimenUtils.dp2Px(10);
+    private static final float PIE_RADIUS = DimenUtils.dp2px(100);
+    private static final float MOVE_DISTANCE = DimenUtils.dp2px(10);
     private static int mStandOutNum = 1;
     private Paint mPiePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private RectF mPieRectF = new RectF();

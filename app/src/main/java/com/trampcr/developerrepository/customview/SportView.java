@@ -9,13 +9,15 @@ import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 import com.trampcr.developerrepository.utils.DimenUtils;
 
 public class SportView extends View {
-    private static final float SPORT_VIEW_RADIUS = DimenUtils.dp2Px(150);
-    private static final float SPORT_VIEW_WIDTH = DimenUtils.dp2Px(10);
+    public static final String TAG = SportView.class.getSimpleName();
+    private static final float SPORT_VIEW_RADIUS = DimenUtils.dp2px(150);
+    private static final float SPORT_VIEW_WIDTH = DimenUtils.dp2px(10);
     private static final float SPORT_START_ANGLE = 60;
     private static final float SPORT_SWEEP_ANGLE = 220;
     private static final String SPORT_TEXT = "AbaB";
@@ -30,7 +32,7 @@ public class SportView extends View {
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
-        mSportViewPaint.setTextSize(DimenUtils.dp2Px(80));
+        mSportViewPaint.setTextSize(DimenUtils.dp2px(80));
         mSportViewPaint.setTextAlign(Paint.Align.CENTER);
     }
 
@@ -57,8 +59,8 @@ public class SportView extends View {
 //        canvas.drawText(SPORT_TEXT, getWidth() / 2, getHeight() / 2 + mSportTextRounds.height() / 2,
 //                mSportViewPaint);
         Paint.FontMetrics fontMetrics = mSportViewPaint.getFontMetrics();
-        canvas.drawText(SPORT_TEXT, getWidth() / 2,
-                getHeight() / 2 - (fontMetrics.ascent + fontMetrics.descent) / 2,
+        Log.d(TAG, "onDraw: ascent = " + fontMetrics.ascent + ", descent = " + fontMetrics.descent);
+        canvas.drawText(SPORT_TEXT, getWidth() / 2, getHeight() / 2 - (fontMetrics.ascent + fontMetrics.descent) / 2,
                 mSportViewPaint);
     }
 }
