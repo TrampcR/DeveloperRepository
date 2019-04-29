@@ -16,6 +16,16 @@ public class DimenUtils {
      * @return px 像素大小
      */
     public static float dp2px(float dp) {
-        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, Resources.getSystem().getDisplayMetrics());
+        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, Resources.getSystem()
+                .getDisplayMetrics());
+    }
+
+    /**
+     * 获取 Camera 的 Location
+     *
+     * @return Camera Z 轴坐标，适配所有手机的 Camera Z 轴坐标
+     */
+    public static float getCameraLocation() {
+        return -8 * Resources.getSystem().getDisplayMetrics().density;
     }
 }
