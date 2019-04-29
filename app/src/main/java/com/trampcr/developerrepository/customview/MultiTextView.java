@@ -30,7 +30,6 @@ public class MultiTextView extends View {
             "然后反求诸己，便可以用共情心和员工共鸣，很容易带出一支好队伍。4、一个人在职场里持续上升，必须要有持续的增量成长。";
 
     private TextPaint mTextPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
-    private Paint mTextPaint2 = new Paint(Paint.ANTI_ALIAS_FLAG);
     private StaticLayout mTextLayout;
     private float[] mTextMeasuredWidth = {0};
     private float mTextSpacing = 0;

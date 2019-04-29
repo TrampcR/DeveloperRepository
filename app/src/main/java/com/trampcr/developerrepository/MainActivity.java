@@ -1,5 +1,7 @@
 package com.trampcr.developerrepository;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +14,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.AnimationSet;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -19,6 +22,8 @@ import android.widget.Button;
 
 import com.dianping.logan.Logan;
 import com.dianping.logan.LoganConfig;
+import com.trampcr.developerrepository.customview.AnimationView;
+import com.trampcr.developerrepository.customview.CameraView;
 import com.trampcr.developerrepository.list.ForRemove;
 import com.trampcr.developerrepository.reflect.Person;
 import com.trampcr.developerrepository.reflect.ReflectHelper;
@@ -60,6 +65,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private WebView mWebView;
     private Handler mHandler;
 
+    private AnimationView mAnimationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +85,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        Log.d(TAG, "onCreate: " + (-1 % 1));
 //        testWindow();
 //        testRemove();
+        testAnimationView();
+    }
+
+    private void testAnimationView() {
+        mAnimationView = (AnimationView) findViewById(R.id.view);
+        ObjectAnimator topFlipAnimator = ObjectAnimator.ofInt(mAnimationView, "topFlip", -30);
+        topFlipAnimator.setDuration(1500);
+
+        ObjectAnimator bottomFlipAnimator = ObjectAnimator.ofInt(mAnimationView, "bottomFlip", -45);
+        topFlipAnimator.setDuration(1500);
+
+        ObjectAnimator rotateAnimator = ObjectAnimator.ofInt(mAnimationView, "rotate", 270);
+        rotateAnimator.setDuration(1500);
+
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playSequentially(topFlipAnimator, rotateAnimator, bottomFlipAnimator);
+        animatorSet.setStartDelay(1000);
+        animatorSet.start();
     }
 
     private void testRemove() {
