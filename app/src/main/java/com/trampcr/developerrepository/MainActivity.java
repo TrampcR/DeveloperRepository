@@ -1,37 +1,35 @@
 package com.trampcr.developerrepository;
 
 import android.animation.AnimatorSet;
+import android.animation.Keyframe;
 import android.animation.ObjectAnimator;
+import android.animation.PropertyValuesHolder;
 import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.WindowManager;
-import android.view.animation.AnimationSet;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.dianping.logan.Logan;
 import com.dianping.logan.LoganConfig;
-import com.trampcr.developerrepository.customview.AnimationView;
-import com.trampcr.developerrepository.customview.CameraView;
+import com.trampcr.developerrepository.customview.CameraAnimationView;
 import com.trampcr.developerrepository.list.ForRemove;
 import com.trampcr.developerrepository.reflect.Person;
 import com.trampcr.developerrepository.reflect.ReflectHelper;
 import com.trampcr.developerrepository.retrofitdemo.GitHubService;
 import com.trampcr.developerrepository.retrofitdemo.Repo;
 import com.trampcr.developerrepository.startactivity.StartActivityDemo;
+import com.trampcr.developerrepository.utils.DimenUtils;
 import com.trampcr.developerrepository.webview.RedirectDemo;
-import com.trampcr.developerrepository.webview.WebViewDemo;
 
 import java.io.File;
 import java.io.IOException;
@@ -56,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static final String WEBVIEW_TEST_URL = "https://liebao.winndoo.com/api/v1/searchResult?kwd=%E7%8E%8B%E8%AF%97%E9%BE%84%E6%89%8B%E9%93%BE&unionid=d6cf096a6f11ca58b28ef9b2be851e24&language=zh_CN&isinstall=false";
     public static final String ASSETS_URL = "file:///android_asset/synchronized.html";
     public static final String CLASS_NAME = "com.trampcr.developerrepository.reflect.Person";
+    public static final float TRANSLATE_WIDTH = DimenUtils.dp2px(300);
 
     public String sdcardUrl;
 
@@ -65,7 +64,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private WebView mWebView;
     private Handler mHandler;
 
-    private AnimationView mAnimationView;
+    private CameraAnimationView mCameraAnimationView;
+    private ImageView mAnimatorView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,24 +85,53 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        Log.d(TAG, "onCreate: " + (-1 % 1));
 //        testWindow();
 //        testRemove();
-        testAnimationView();
+//        testCameraAnimationView();
+        testAnimatorView();
     }
 
-    private void testAnimationView() {
-        mAnimationView = (AnimationView) findViewById(R.id.view);
-        ObjectAnimator topFlipAnimator = ObjectAnimator.ofInt(mAnimationView, "topFlip", -30);
-        topFlipAnimator.setDuration(1500);
+    private void testAnimatorView() {
+        mAnimatorView = (ImageView) findViewById(R.id.view);
 
-        ObjectAnimator bottomFlipAnimator = ObjectAnimator.ofInt(mAnimationView, "bottomFlip", -45);
-        topFlipAnimator.setDuration(1500);
+        Keyframe keyframe1 = Keyframe.ofFloat(0, 0);
+        Keyframe keyframe2 = Keyframe.ofFloat(0.2f, 0.6f * TRANSLATE_WIDTH);
+        Keyframe keyframe3 = Keyframe.ofFloat(0.6f, 0.8f * TRANSLATE_WIDTH);
+        Keyframe keyframe4 = Keyframe.ofFloat(1, 1 * TRANSLATE_WIDTH);
+        PropertyValuesHolder propertyValuesHolder = PropertyValuesHolder.ofKeyframe("translationX", keyframe1, keyframe2,
+                keyframe3, keyframe4);
+        ObjectAnimator objectAnimator = ObjectAnimator.ofPropertyValuesHolder(mAnimatorView, propertyValuesHolder);
+        objectAnimator.setStartDelay(1000);
+        objectAnimator.setDuration(2000);
+        objectAnimator.start();
+    }
 
-        ObjectAnimator rotateAnimator = ObjectAnimator.ofInt(mAnimationView, "rotate", 270);
-        rotateAnimator.setDuration(1500);
+    private void testCameraAnimationView() {
+//        mCameraAnimationView = (CameraAnimationView) findViewById(R.id.view);
 
-        AnimatorSet animatorSet = new AnimatorSet();
-        animatorSet.playSequentially(topFlipAnimator, rotateAnimator, bottomFlipAnimator);
-        animatorSet.setStartDelay(1000);
-        animatorSet.start();
+        // 动画依次执行
+//        ObjectAnimator topFlipAnimator = ObjectAnimator.ofInt(mCameraAnimationView, "topFlip", -45);
+//        topFlipAnimator.setDuration(1500);
+//
+//        ObjectAnimator bottomFlipAnimator = ObjectAnimator.ofInt(mCameraAnimationView, "bottomFlip", 45);
+//        topFlipAnimator.setDuration(1500);
+//
+//        ObjectAnimator rotateAnimator = ObjectAnimator.ofInt(mCameraAnimationView, "rotate", 270);
+//        rotateAnimator.setDuration(1500);
+//
+//        AnimatorSet animatorSet = new AnimatorSet();
+//        animatorSet.playSequentially(bottomFlipAnimator, rotateAnimator, topFlipAnimator);
+//        animatorSet.setStartDelay(1000);
+//        animatorSet.start();
+
+        // 动画同时执行
+        PropertyValuesHolder topFlipHolder = PropertyValuesHolder.ofInt("topFlip", -45);
+        PropertyValuesHolder rotationHolder = PropertyValuesHolder.ofInt("rotate", 270);
+        PropertyValuesHolder bottomFlipHolder = PropertyValuesHolder.ofInt("bottomFlip", 45);
+
+        ObjectAnimator objectAnimator = ObjectAnimator.ofPropertyValuesHolder(mCameraAnimationView, topFlipHolder,
+                rotationHolder, bottomFlipHolder);
+        objectAnimator.setStartDelay(1000);
+        objectAnimator.setDuration(2000);
+        objectAnimator.start();
     }
 
     private void testRemove() {

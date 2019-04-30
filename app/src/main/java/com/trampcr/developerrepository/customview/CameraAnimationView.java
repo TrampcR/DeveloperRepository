@@ -17,7 +17,7 @@ import com.trampcr.developerrepository.utils.DimenUtils;
  * Created by trampcr on 2019/4/29.
  */
 
-public class AnimationView extends View {
+public class CameraAnimationView extends View {
     public static final float BITMAP_WIDTH = DimenUtils.dp2px(200);
     public static final float BITMAP_PADDING = DimenUtils.dp2px(100);
 
@@ -29,7 +29,7 @@ public class AnimationView extends View {
     private int mTopFlip = 0;
     private int mBottomFlip = 0;
 
-    public AnimationView(Context context, @Nullable AttributeSet attrs) {
+    public CameraAnimationView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
