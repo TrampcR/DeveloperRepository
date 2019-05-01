@@ -4,15 +4,15 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <!--<com.trampcr.developerrepository.customview.CameraAnimationView-->
-        <!--android:id="@+id/view"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"/>-->
-
-    <ImageView
+    <com.trampcr.developerrepository.customview.province.ProvinceView
         android:id="@+id/view"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@mipmap/girl"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--<ImageView-->
+        <!--android:id="@+id/view"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:src="@mipmap/girl"/>-->
 
 </LinearLayout>

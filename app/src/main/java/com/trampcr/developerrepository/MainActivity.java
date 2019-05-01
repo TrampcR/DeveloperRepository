@@ -1,11 +1,12 @@
 package com.trampcr.developerrepository;
 
-import android.animation.AnimatorSet;
 import android.animation.Keyframe;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
+import android.animation.TypeEvaluator;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -22,6 +23,10 @@ import android.widget.ImageView;
 import com.dianping.logan.Logan;
 import com.dianping.logan.LoganConfig;
 import com.trampcr.developerrepository.customview.CameraAnimationView;
+import com.trampcr.developerrepository.customview.point.PointTypeEvaluator;
+import com.trampcr.developerrepository.customview.point.PointView;
+import com.trampcr.developerrepository.customview.province.ProvinceTypeEvaluator;
+import com.trampcr.developerrepository.customview.province.ProvinceView;
 import com.trampcr.developerrepository.list.ForRemove;
 import com.trampcr.developerrepository.reflect.Person;
 import com.trampcr.developerrepository.reflect.ReflectHelper;
@@ -66,6 +71,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private CameraAnimationView mCameraAnimationView;
     private ImageView mAnimatorView;
+    private PointView mPointView;
+    private ProvinceView mProvinceView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +93,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        testWindow();
 //        testRemove();
 //        testCameraAnimationView();
-        testAnimatorView();
+//        testAnimatorView();
+//        testPointView();
+        testProvinceView();
+    }
+
+    private void testProvinceView() {
+        mProvinceView = (ProvinceView) findViewById(R.id.view);
+
+        ObjectAnimator provinceAnimator = ObjectAnimator.ofObject(mProvinceView, "province", new ProvinceTypeEvaluator(), "澳门");
+        provinceAnimator.setStartDelay(1000);
+        provinceAnimator.setDuration(3000);
+        provinceAnimator.start();
+    }
+
+    private void testPointView() {
+        mPointView = (PointView) findViewById(R.id.view);
+
+        Point targetPoint = new Point((int) DimenUtils.dp2px(200), (int) DimenUtils.dp2px(200));
+        ObjectAnimator pointAnimator = ObjectAnimator.ofObject(mPointView, "point", new PointTypeEvaluator(), targetPoint);
+        pointAnimator.setStartDelay(1000);
+        pointAnimator.setDuration(2000);
+        pointAnimator.start();
     }
 
     private void testAnimatorView() {
