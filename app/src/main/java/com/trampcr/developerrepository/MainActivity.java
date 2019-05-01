@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        testCameraAnimationView();
 //        testAnimatorView();
 //        testPointView();
-        testProvinceView();
+//        testProvinceView();
     }
 
     private void testProvinceView() {

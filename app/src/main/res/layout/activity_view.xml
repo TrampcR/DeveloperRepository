@@ -4,10 +4,10 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <com.trampcr.developerrepository.customview.province.ProvinceView
+    <com.trampcr.developerrepository.customview.bitmapordrawable.DrawableView
         android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_width="400dp"
+        android:layout_height="400dp"/>
 
     <!--<ImageView-->
         <!--android:id="@+id/view"-->
