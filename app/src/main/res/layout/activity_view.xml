@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <com.trampcr.developerrepository.customview.bitmapordrawable.DrawableView
-        android:id="@+id/view"
-        android:layout_width="400dp"
-        android:layout_height="400dp"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#88445566">
+
+        <EditText
+            android:id="@+id/et_standard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#abcfaa">
+
+        <com.trampcr.developerrepository.customview.MaterialEditText
+            android:id="@+id/et_material"
+            app:useFloatingLabel="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Username" />
+    </FrameLayout>
 
     <!--<ImageView-->
         <!--android:id="@+id/view"-->

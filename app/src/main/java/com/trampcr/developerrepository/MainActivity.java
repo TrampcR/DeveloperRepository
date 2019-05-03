@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void testProvinceView() {
-        mProvinceView = (ProvinceView) findViewById(R.id.view);
+//        mProvinceView = (ProvinceView) findViewById(R.id.view);
 
         ObjectAnimator provinceAnimator = ObjectAnimator.ofObject(mProvinceView, "province", new ProvinceTypeEvaluator(), "澳门");
         provinceAnimator.setStartDelay(1000);
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void testPointView() {
-        mPointView = (PointView) findViewById(R.id.view);
+//        mPointView = (PointView) findViewById(R.id.view);
 
         Point targetPoint = new Point((int) DimenUtils.dp2px(200), (int) DimenUtils.dp2px(200));
         ObjectAnimator pointAnimator = ObjectAnimator.ofObject(mPointView, "point", new PointTypeEvaluator(), targetPoint);
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void testAnimatorView() {
-        mAnimatorView = (ImageView) findViewById(R.id.view);
+//        mAnimatorView = (ImageView) findViewById(R.id.view);
 
         Keyframe keyframe1 = Keyframe.ofFloat(0, 0);
         Keyframe keyframe2 = Keyframe.ofFloat(0.2f, 0.6f * TRANSLATE_WIDTH);
