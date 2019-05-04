@@ -5,34 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#88445566">
+    <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="#88445566">-->
 
-        <EditText
-            android:id="@+id/et_standard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </FrameLayout>
+        <!--<EditText-->
+            <!--android:id="@+id/et_standard"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+    <!--</FrameLayout>-->
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#abcfaa">
+    <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="#abcfaa">-->
 
-        <com.trampcr.developerrepository.customview.MaterialEditText
-            android:id="@+id/et_material"
-            app:useFloatingLabel="true"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Username" />
-    </FrameLayout>
+        <!--<com.trampcr.developerrepository.customview.MaterialEditText-->
+            <!--android:id="@+id/et_material"-->
+            <!--app:useFloatingLabel="true"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:hint="Username" />-->
+    <!--</FrameLayout>-->
 
-    <!--<ImageView-->
-        <!--android:id="@+id/view"-->
-        <!--android:layout_width="100dp"-->
-        <!--android:layout_height="100dp"-->
-        <!--android:src="@mipmap/girl"/>-->
+    <com.trampcr.developerrepository.customview.measureorlayout.SquareImageView
+        android:id="@+id/view"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:src="@mipmap/girl"/>
 
 </LinearLayout>
