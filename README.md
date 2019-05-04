@@ -14,3 +14,7 @@ https://stackoverflow.com/questions/30803405/cannot-resolve-symbol-appcompatacti
 2、SquareImageView
 
 继承已有的 View，重写 onMeasure()
+
+3、CircleView
+
+继承自 View，完全进行自定义计算，重写 onMeasure()，用 resolveSize() / resolveSizeAndState() 修正结果。

@@ -29,10 +29,9 @@
             <!--android:hint="Username" />-->
     <!--</FrameLayout>-->
 
-    <com.trampcr.developerrepository.customview.measureorlayout.SquareImageView
+    <com.trampcr.developerrepository.customview.measureorlayout.CircleView
         android:id="@+id/view"
         android:layout_width="300dp"
-        android:layout_height="200dp"
-        android:src="@mipmap/girl"/>
+        android:layout_height="200dp"/>
 
 </LinearLayout>
