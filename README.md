@@ -25,3 +25,7 @@ https://stackoverflow.com/questions/30803405/cannot-resolve-symbol-appcompatacti
 
 注意：通过 measureChildWithMargins 测量子 View 时，需要重写 generateLayoutParams() 方法，并返回
 MarginLayoutParams 对象。
+
+5、TouchView
+
+自定义 View 的触摸反馈，重写 onTouchEvent() 方法。

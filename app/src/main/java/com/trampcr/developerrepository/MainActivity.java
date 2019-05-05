@@ -19,6 +19,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.dianping.logan.Logan;
 import com.dianping.logan.LoganConfig;
@@ -27,6 +28,7 @@ import com.trampcr.developerrepository.customview.point.PointTypeEvaluator;
 import com.trampcr.developerrepository.customview.point.PointView;
 import com.trampcr.developerrepository.customview.province.ProvinceTypeEvaluator;
 import com.trampcr.developerrepository.customview.province.ProvinceView;
+import com.trampcr.developerrepository.customview.touch.TouchView;
 import com.trampcr.developerrepository.list.ForRemove;
 import com.trampcr.developerrepository.reflect.Person;
 import com.trampcr.developerrepository.reflect.ReflectHelper;
@@ -73,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView mAnimatorView;
     private PointView mPointView;
     private ProvinceView mProvinceView;
+    private TouchView mTouchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,6 +99,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        testAnimatorView();
 //        testPointView();
 //        testProvinceView();
+        testTouchView();
+    }
+
+    private void testTouchView() {
+        mTouchView = (TouchView) findViewById(R.id.view);
+        mTouchView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "touch", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void testProvinceView() {
