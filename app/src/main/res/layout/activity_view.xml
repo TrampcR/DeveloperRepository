@@ -1,37 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <!--<FrameLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:background="#88445566">-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#88445566">-->
 
-        <!--<EditText-->
-            <!--android:id="@+id/et_standard"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content" />-->
+    <!--<EditText-->
+    <!--android:id="@+id/et_standard"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content" />-->
     <!--</FrameLayout>-->
 
     <!--<FrameLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:background="#abcfaa">-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#abcfaa">-->
 
-        <!--<com.trampcr.developerrepository.customview.MaterialEditText-->
-            <!--android:id="@+id/et_material"-->
-            <!--app:useFloatingLabel="true"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:hint="Username" />-->
+    <!--<com.trampcr.developerrepository.customview.MaterialEditText-->
+    <!--android:id="@+id/et_material"-->
+    <!--app:useFloatingLabel="true"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:hint="Username" />-->
     <!--</FrameLayout>-->
 
-    <com.trampcr.developerrepository.customview.measureorlayout.CircleView
-        android:id="@+id/view"
-        android:layout_width="300dp"
-        android:layout_height="200dp"/>
+    <!--<com.trampcr.developerrepository.customview.measureorlayout.CircleView-->
+    <!--android:id="@+id/view"-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="200dp"/>-->
+
+    <com.trampcr.developerrepository.customview.measureorlayout.TagLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="山东：济南" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="河北：石家庄" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="吉林：长春" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="黑龙江：哈尔滨" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="辽宁：沈阳" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="内蒙古：呼和浩特" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新疆：乌鲁木齐" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="甘肃：兰州" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="宁夏：银川" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="山西：太原" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="陕西：西安" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="河南：郑州" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="安徽：合肥" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="江苏：南京" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="浙江：杭州" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="福建：福州" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="广东：广州" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="江西：南昌" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="海南：海口" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="广西：南宁" />
+
+        <com.trampcr.developerrepository.customview.measureorlayout.ColorTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="贵州：贵阳" />
+
+    </com.trampcr.developerrepository.customview.measureorlayout.TagLayout>
 
 </LinearLayout>

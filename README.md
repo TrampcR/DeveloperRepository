@@ -18,3 +18,10 @@ https://stackoverflow.com/questions/30803405/cannot-resolve-symbol-appcompatacti
 3、CircleView
 
 继承自 View，完全进行自定义计算，重写 onMeasure()，用 resolveSize() / resolveSizeAndState() 修正结果。
+
+4、TagLayout
+
+自定义 Layout，继承自 ViewGroup，重写 onMeasure()、onLayout()
+
+注意：通过 measureChildWithMargins 测量子 View 时，需要重写 generateLayoutParams() 方法，并返回
+MarginLayoutParams 对象。
