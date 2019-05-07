@@ -99,11 +99,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        testAnimatorView();
 //        testPointView();
 //        testProvinceView();
-        testTouchView();
+//        testTouchView();
     }
 
     private void testTouchView() {
-        mTouchView = (TouchView) findViewById(R.id.view);
+//        mTouchView = (TouchView) findViewById(R.id.view);
         mTouchView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

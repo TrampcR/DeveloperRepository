@@ -29,3 +29,7 @@ MarginLayoutParams 对象。
 5、TouchView
 
 自定义 View 的触摸反馈，重写 onTouchEvent() 方法。
+
+6、ScalableImageView
+
+通过 GestureDetector 和 OverScroller 实现双击放大并支持双向滑动的 View。
