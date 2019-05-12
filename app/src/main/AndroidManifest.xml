@@ -19,6 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".startactivity.StartActivityDemo"/>
+
+        <activity android:name=".customview.touch.dispatchdemo.ViewGroupDispatchActivity"/>
     </application>
 
 </manifest>

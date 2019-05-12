@@ -3,9 +3,6 @@ package com.trampcr.developerrepository;
 import android.animation.Keyframe;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
-import android.animation.TypeEvaluator;
-import android.app.PendingIntent;
-import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Handler;
@@ -29,12 +26,13 @@ import com.trampcr.developerrepository.customview.point.PointView;
 import com.trampcr.developerrepository.customview.province.ProvinceTypeEvaluator;
 import com.trampcr.developerrepository.customview.province.ProvinceView;
 import com.trampcr.developerrepository.customview.touch.TouchView;
+import com.trampcr.developerrepository.customview.touch.dispatchdemo.ViewGroupDispatchActivity;
 import com.trampcr.developerrepository.list.ForRemove;
 import com.trampcr.developerrepository.reflect.Person;
 import com.trampcr.developerrepository.reflect.ReflectHelper;
 import com.trampcr.developerrepository.retrofitdemo.GitHubService;
 import com.trampcr.developerrepository.retrofitdemo.Repo;
-import com.trampcr.developerrepository.startactivity.StartActivityDemo;
+import com.trampcr.developerrepository.utils.CommonUtils;
 import com.trampcr.developerrepository.utils.DimenUtils;
 import com.trampcr.developerrepository.webview.RedirectDemo;
 
@@ -68,6 +66,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnWebViewDemo;
     private Button mBtnStartActivityDemo;
     private Button mBtnReflectClick;
+    private Button mBtnViewGroupDispatch;
+
     private WebView mWebView;
     private Handler mHandler;
 
@@ -80,11 +80,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
-        setContentView(R.layout.activity_view);
-//        initView();
+        setContentView(R.layout.activity_main);
+        initView();
 //        initData();
-//        initListener();
+        initListener();
 //        init();
 //        Logan.w("test logan", 1);
 //        Log.d("zxm", "test logan 2");
@@ -248,16 +247,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initView() {
-        mBtnWebViewDemo = (Button) findViewById(R.id.btn_webview_demo);
-        mBtnStartActivityDemo = (Button) findViewById(R.id.btn_start_activity_demo);
-        mBtnReflectClick = (Button) findViewById(R.id.btn_reflect_click);
-        mWebView = (WebView) findViewById(R.id.web_view);
+//        mBtnWebViewDemo = (Button) findViewById(R.id.btn_webview_demo);
+//        mBtnStartActivityDemo = (Button) findViewById(R.id.btn_start_activity_demo);
+//        mBtnReflectClick = (Button) findViewById(R.id.btn_reflect_click);
+//        mWebView = (WebView) findViewById(R.id.web_view);
+
+        mBtnViewGroupDispatch = (Button) findViewById(R.id.btn_view_group_dispatch);
     }
 
     private void initListener() {
-        mBtnWebViewDemo.setOnClickListener(this);
-        mBtnStartActivityDemo.setOnClickListener(this);
-        mBtnReflectClick.setOnClickListener(this);
+//        mBtnWebViewDemo.setOnClickListener(this);
+//        mBtnStartActivityDemo.setOnClickListener(this);
+//        mBtnReflectClick.setOnClickListener(this);
+
+        mBtnViewGroupDispatch.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -332,33 +335,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_webview_demo:
-                testWebView();
+//            case R.id.btn_webview_demo:
+//                testWebView();
+//                break;
+//            case R.id.btn_start_activity_demo:
+//                final Intent intent = new Intent(this, StartActivityDemo.class);
+//                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+////                startActivity(intent);
+//                try {
+//                    mHandler.postDelayed(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            try {
+//                                Log.d(TAG, "run: start");
+//                                PendingIntent.getActivity(MainActivity.this, 0, intent, 0).send();
+//                            } catch (PendingIntent.CanceledException e) {
+//                                e.printStackTrace();
+//                            }
+////                            startActivity(intent);
+//                        }
+//                    },5000);
+//
+//                } catch(Exception e) {
+//                    e.printStackTrace();
+//                }
+//                break;
+//            case R.id.btn_reflect_click:
+//                ReflectHelper.hookOnClickListener(v);
+            case R.id.btn_view_group_dispatch:
+                CommonUtils.startActivity(this, ViewGroupDispatchActivity.class);
                 break;
-            case R.id.btn_start_activity_demo:
-                final Intent intent = new Intent(this, StartActivityDemo.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                startActivity(intent);
-                try {
-                    mHandler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            try {
-                                Log.d(TAG, "run: start");
-                                PendingIntent.getActivity(MainActivity.this, 0, intent, 0).send();
-                            } catch (PendingIntent.CanceledException e) {
-                                e.printStackTrace();
-                            }
-//                            startActivity(intent);
-                        }
-                    },5000);
-
-                } catch(Exception e) {
-                    e.printStackTrace();
-                }
-                break;
-            case R.id.btn_reflect_click:
-                ReflectHelper.hookOnClickListener(v);
             default:
                 break;
         }

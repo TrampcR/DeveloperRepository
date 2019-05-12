@@ -46,4 +46,8 @@
     <string name="settings_language_zh_cn">中文 (简体)</string>
     <string name="settings_language_zh_tw">中文 (繁體)</string>
 
+    <string name="dispatch_view_group_demo">ViewGroup dispatch</string>
+    <string name="dispatch_btn_text_1">Button1 dispatch</string>
+    <string name="dispatch_btn_text_2">Button2 dispatch</string>
+
 </resources>

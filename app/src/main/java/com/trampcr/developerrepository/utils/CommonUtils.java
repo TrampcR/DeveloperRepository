@@ -2,6 +2,7 @@ package com.trampcr.developerrepository.utils;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.provider.Settings;
@@ -51,5 +52,13 @@ public class CommonUtils {
         options.inTargetDensity = width;
 
         return BitmapFactory.decodeResource(context.getResources(), bitmapId, options);
+    }
+
+    public static void startActivity(Context context, Class<?> cls) {
+        if (context == null || cls == null) {
+            return;
+        }
+
+        context.startActivity(new Intent(context, cls));
     }
 }

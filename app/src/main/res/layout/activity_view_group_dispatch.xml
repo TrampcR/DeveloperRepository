@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_group_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.trampcr.developerrepository.customview.touch.dispatchdemo.SubViewGroup
+        android:layout_width="200dp"
+        android:layout_height="200dp">
+
+        <com.trampcr.developerrepository.customview.touch.dispatchdemo.SubView
+            android:id="@+id/sub_view"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+    </com.trampcr.developerrepository.customview.touch.dispatchdemo.SubViewGroup>
+
+    <Button
+        android:id="@+id/btn_view_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dispatch_btn_text_1"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_view_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dispatch_btn_text_2"
+        android:textAllCaps="false" />
+
+</LinearLayout>

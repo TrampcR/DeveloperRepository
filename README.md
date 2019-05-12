@@ -1,4 +1,7 @@
-# DeveloperRepository 开发者的工具类库
+# DeveloperRepository 开发者仓库
+
+- 学习笔记
+- 工具类库
 
 **一、自定义 View**
 
@@ -33,3 +36,13 @@ MarginLayoutParams 对象。
 6、ScalableImageView
 
 通过 GestureDetector 和 OverScroller 实现双击放大并支持双向滑动的 View。
+
+**二、事件分发**
+
+1、原理
+
+参考：[Android事件分发机制 详解攻略，您值得拥有](https://blog.csdn.net/carson_ho/article/details/54136311)
+
+2、Demo
+
+ViewGroupDispatchActivity、SubView、SubViewGroup
