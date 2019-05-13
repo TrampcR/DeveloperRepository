@@ -21,6 +21,8 @@
         <activity android:name=".startactivity.StartActivityDemo"/>
 
         <activity android:name=".customview.touch.dispatchdemo.ViewGroupDispatchActivity"/>
+
+        <activity android:name=".customview.touch.RelayMultiTouchActivity"/>
     </application>
 
 </manifest>

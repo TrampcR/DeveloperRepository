@@ -25,6 +25,7 @@ import com.trampcr.developerrepository.customview.point.PointTypeEvaluator;
 import com.trampcr.developerrepository.customview.point.PointView;
 import com.trampcr.developerrepository.customview.province.ProvinceTypeEvaluator;
 import com.trampcr.developerrepository.customview.province.ProvinceView;
+import com.trampcr.developerrepository.customview.touch.RelayMultiTouchActivity;
 import com.trampcr.developerrepository.customview.touch.TouchView;
 import com.trampcr.developerrepository.customview.touch.dispatchdemo.ViewGroupDispatchActivity;
 import com.trampcr.developerrepository.list.ForRemove;
@@ -67,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnStartActivityDemo;
     private Button mBtnReflectClick;
     private Button mBtnViewGroupDispatch;
+    private Button mBtnMultiTouchView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -253,6 +255,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        mWebView = (WebView) findViewById(R.id.web_view);
 
         mBtnViewGroupDispatch = (Button) findViewById(R.id.btn_view_group_dispatch);
+        mBtnMultiTouchView = (Button) findViewById(R.id.btn_multi_touch_view);
     }
 
     private void initListener() {
@@ -261,6 +264,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        mBtnReflectClick.setOnClickListener(this);
 
         mBtnViewGroupDispatch.setOnClickListener(this);
+        mBtnMultiTouchView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -364,6 +368,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                ReflectHelper.hookOnClickListener(v);
             case R.id.btn_view_group_dispatch:
                 CommonUtils.startActivity(this, ViewGroupDispatchActivity.class);
+                break;
+            case R.id.btn_multi_touch_view:
+                CommonUtils.startActivity(this, RelayMultiTouchActivity.class);
                 break;
             default:
                 break;
