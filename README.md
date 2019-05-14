@@ -37,6 +37,11 @@ MarginLayoutParams 对象。
 
 通过 GestureDetector 和 OverScroller 实现双击放大并支持双向滑动的 View。
 
+7、多点触控
+
+- 接力型：RelayMultiTouchView
+- 配合型：CooperateMultiTouchView
+
 **二、事件分发**
 
 1、原理

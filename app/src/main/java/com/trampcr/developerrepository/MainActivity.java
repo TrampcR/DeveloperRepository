@@ -25,6 +25,8 @@ import com.trampcr.developerrepository.customview.point.PointTypeEvaluator;
 import com.trampcr.developerrepository.customview.point.PointView;
 import com.trampcr.developerrepository.customview.province.ProvinceTypeEvaluator;
 import com.trampcr.developerrepository.customview.province.ProvinceView;
+import com.trampcr.developerrepository.customview.touch.CooperateMultiTouchActivity;
+import com.trampcr.developerrepository.customview.touch.CooperateMultiTouchView;
 import com.trampcr.developerrepository.customview.touch.RelayMultiTouchActivity;
 import com.trampcr.developerrepository.customview.touch.TouchView;
 import com.trampcr.developerrepository.customview.touch.dispatchdemo.ViewGroupDispatchActivity;
@@ -68,7 +70,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnStartActivityDemo;
     private Button mBtnReflectClick;
     private Button mBtnViewGroupDispatch;
-    private Button mBtnMultiTouchView;
+    private Button mBtnRelayMultiTouchView;
+    private Button mBtnCooperateMultiTouchView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -255,7 +258,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        mWebView = (WebView) findViewById(R.id.web_view);
 
         mBtnViewGroupDispatch = (Button) findViewById(R.id.btn_view_group_dispatch);
-        mBtnMultiTouchView = (Button) findViewById(R.id.btn_multi_touch_view);
+        mBtnRelayMultiTouchView = (Button) findViewById(R.id.btn_relay_multi_touch_view);
+        mBtnCooperateMultiTouchView = (Button) findViewById(R.id.btn_cooperate_multi_touch_view);
     }
 
     private void initListener() {
@@ -264,7 +268,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        mBtnReflectClick.setOnClickListener(this);
 
         mBtnViewGroupDispatch.setOnClickListener(this);
-        mBtnMultiTouchView.setOnClickListener(this);
+        mBtnRelayMultiTouchView.setOnClickListener(this);
+        mBtnCooperateMultiTouchView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -369,8 +374,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_view_group_dispatch:
                 CommonUtils.startActivity(this, ViewGroupDispatchActivity.class);
                 break;
-            case R.id.btn_multi_touch_view:
+            case R.id.btn_relay_multi_touch_view:
                 CommonUtils.startActivity(this, RelayMultiTouchActivity.class);
+                break;
+            case R.id.btn_cooperate_multi_touch_view:
+                CommonUtils.startActivity(this, CooperateMultiTouchActivity.class);
                 break;
             default:
                 break;
