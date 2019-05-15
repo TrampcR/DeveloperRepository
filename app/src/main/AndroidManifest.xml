@@ -25,6 +25,8 @@
         <activity android:name=".customview.touch.RelayMultiTouchActivity"/>
 
         <activity android:name=".customview.touch.CooperateMultiTouchActivity"/>
+
+        <activity android:name=".customview.touch.SelfMultiTouchActivity"/>
     </application>
 
 </manifest>

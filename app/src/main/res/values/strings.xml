@@ -51,5 +51,6 @@
     <string name="dispatch_btn_text_2">Button2 dispatch</string>
     <string name="text_relay_multi_touch_view">Relay Multi TouchView</string>
     <string name="text_cooperate_multi_touch_view">Cooperate Multi TouchView</string>
+    <string name="text_self_multi_touch_view">Self Multi TouchView</string>
 
 </resources>

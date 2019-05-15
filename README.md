@@ -41,6 +41,7 @@ MarginLayoutParams 对象。
 
 - 接力型：RelayMultiTouchView
 - 配合型：CooperateMultiTouchView
+- 独立型：SelfMultiTouchView
 
 **二、事件分发**
 

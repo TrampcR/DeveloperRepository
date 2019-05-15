@@ -28,6 +28,7 @@ import com.trampcr.developerrepository.customview.province.ProvinceView;
 import com.trampcr.developerrepository.customview.touch.CooperateMultiTouchActivity;
 import com.trampcr.developerrepository.customview.touch.CooperateMultiTouchView;
 import com.trampcr.developerrepository.customview.touch.RelayMultiTouchActivity;
+import com.trampcr.developerrepository.customview.touch.SelfMultiTouchActivity;
 import com.trampcr.developerrepository.customview.touch.TouchView;
 import com.trampcr.developerrepository.customview.touch.dispatchdemo.ViewGroupDispatchActivity;
 import com.trampcr.developerrepository.list.ForRemove;
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnViewGroupDispatch;
     private Button mBtnRelayMultiTouchView;
     private Button mBtnCooperateMultiTouchView;
+    private Button mBtnSelfMultiTouchView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -260,6 +262,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnViewGroupDispatch = (Button) findViewById(R.id.btn_view_group_dispatch);
         mBtnRelayMultiTouchView = (Button) findViewById(R.id.btn_relay_multi_touch_view);
         mBtnCooperateMultiTouchView = (Button) findViewById(R.id.btn_cooperate_multi_touch_view);
+        mBtnSelfMultiTouchView = (Button) findViewById(R.id.btn_self_multi_touch_view);
     }
 
     private void initListener() {
@@ -270,6 +273,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnViewGroupDispatch.setOnClickListener(this);
         mBtnRelayMultiTouchView.setOnClickListener(this);
         mBtnCooperateMultiTouchView.setOnClickListener(this);
+        mBtnSelfMultiTouchView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -379,6 +383,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_cooperate_multi_touch_view:
                 CommonUtils.startActivity(this, CooperateMultiTouchActivity.class);
+                break;
+            case R.id.btn_self_multi_touch_view:
+                CommonUtils.startActivity(this, SelfMultiTouchActivity.class);
                 break;
             default:
                 break;
