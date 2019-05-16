@@ -31,6 +31,7 @@ import com.trampcr.developerrepository.customview.touch.RelayMultiTouchActivity;
 import com.trampcr.developerrepository.customview.touch.SelfMultiTouchActivity;
 import com.trampcr.developerrepository.customview.touch.TouchView;
 import com.trampcr.developerrepository.customview.touch.dispatchdemo.ViewGroupDispatchActivity;
+import com.trampcr.developerrepository.customview.viewpager.TwoPagerActivity;
 import com.trampcr.developerrepository.list.ForRemove;
 import com.trampcr.developerrepository.reflect.Person;
 import com.trampcr.developerrepository.reflect.ReflectHelper;
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnRelayMultiTouchView;
     private Button mBtnCooperateMultiTouchView;
     private Button mBtnSelfMultiTouchView;
+    private Button mBtnTwoPagerView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -263,6 +265,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnRelayMultiTouchView = (Button) findViewById(R.id.btn_relay_multi_touch_view);
         mBtnCooperateMultiTouchView = (Button) findViewById(R.id.btn_cooperate_multi_touch_view);
         mBtnSelfMultiTouchView = (Button) findViewById(R.id.btn_self_multi_touch_view);
+        mBtnTwoPagerView = (Button) findViewById(R.id.btn_two_pager_view);
     }
 
     private void initListener() {
@@ -274,6 +277,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnRelayMultiTouchView.setOnClickListener(this);
         mBtnCooperateMultiTouchView.setOnClickListener(this);
         mBtnSelfMultiTouchView.setOnClickListener(this);
+        mBtnTwoPagerView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -386,6 +390,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_self_multi_touch_view:
                 CommonUtils.startActivity(this, SelfMultiTouchActivity.class);
+                break;
+            case R.id.btn_two_pager_view:
+                CommonUtils.startActivity(this, TwoPagerActivity.class);
                 break;
             default:
                 break;

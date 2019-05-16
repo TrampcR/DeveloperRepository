@@ -52,14 +52,21 @@
         android:id="@+id/btn_cooperate_multi_touch_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/text_relay_multi_touch_view"
+        android:text="@string/text_cooperate_multi_touch_view"
         android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btn_self_multi_touch_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/text_relay_multi_touch_view"
+        android:text="@string/text_self_multi_touch_view"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_two_pager_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_two_pager_view"
         android:textAllCaps="false" />
 
 </LinearLayout>

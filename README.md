@@ -43,6 +43,8 @@ MarginLayoutParams 对象。
 - 配合型：CooperateMultiTouchView
 - 独立型：SelfMultiTouchView
 
+8、手写 ViewPager：TwoPagerView
+
 **二、事件分发**
 
 1、原理

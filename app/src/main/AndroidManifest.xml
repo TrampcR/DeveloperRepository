@@ -27,6 +27,8 @@
         <activity android:name=".customview.touch.CooperateMultiTouchActivity"/>
 
         <activity android:name=".customview.touch.SelfMultiTouchActivity"/>
+
+        <activity android:name=".customview.viewpager.TwoPagerActivity"/>
     </application>
 
 </manifest>
