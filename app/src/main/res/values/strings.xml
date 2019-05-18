@@ -53,5 +53,6 @@
     <string name="text_cooperate_multi_touch_view">Cooperate Multi TouchView</string>
     <string name="text_self_multi_touch_view">Self Multi TouchView</string>
     <string name="text_two_pager_view">Two Pager View</string>
+    <string name="text_drag_listener_grid_view">Drag Listener Grid View</string>
 
 </resources>

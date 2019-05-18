@@ -29,6 +29,8 @@
         <activity android:name=".customview.touch.SelfMultiTouchActivity"/>
 
         <activity android:name=".customview.viewpager.TwoPagerActivity"/>
+
+        <activity android:name=".customview.drag.DragListenerActivity"/>
     </application>
 
 </manifest>
