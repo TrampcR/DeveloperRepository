@@ -31,6 +31,8 @@
         <activity android:name=".customview.viewpager.TwoPagerActivity"/>
 
         <activity android:name=".customview.drag.DragListenerActivity"/>
+
+        <activity android:name=".customview.drag.DragHelperActivity"/>
     </application>
 
 </manifest>

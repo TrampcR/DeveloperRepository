@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.dianping.logan.Logan;
 import com.dianping.logan.LoganConfig;
 import com.trampcr.developerrepository.customview.CameraAnimationView;
+import com.trampcr.developerrepository.customview.drag.DragHelperActivity;
 import com.trampcr.developerrepository.customview.drag.DragListenerActivity;
 import com.trampcr.developerrepository.customview.point.PointTypeEvaluator;
 import com.trampcr.developerrepository.customview.point.PointView;
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnSelfMultiTouchView;
     private Button mBtnTwoPagerView;
     private Button mBtnDragListenerGridView;
+    private Button mBtnDragHelperGridView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -269,6 +271,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnSelfMultiTouchView = (Button) findViewById(R.id.btn_self_multi_touch_view);
         mBtnTwoPagerView = (Button) findViewById(R.id.btn_two_pager_view);
         mBtnDragListenerGridView = (Button) findViewById(R.id.btn_drag_listener_grid_view);
+        mBtnDragHelperGridView = (Button) findViewById(R.id.btn_drag_helper_grid_view);
     }
 
     private void initListener() {
@@ -282,6 +285,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnSelfMultiTouchView.setOnClickListener(this);
         mBtnTwoPagerView.setOnClickListener(this);
         mBtnDragListenerGridView.setOnClickListener(this);
+        mBtnDragHelperGridView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -400,6 +404,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_drag_listener_grid_view:
                 CommonUtils.startActivity(this, DragListenerActivity.class);
+                break;
+            case R.id.btn_drag_helper_grid_view:
+                CommonUtils.startActivity(this, DragHelperActivity.class);
                 break;
             default:
                 break;
