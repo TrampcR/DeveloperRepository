@@ -23,6 +23,8 @@ import com.dianping.logan.LoganConfig;
 import com.trampcr.developerrepository.customview.CameraAnimationView;
 import com.trampcr.developerrepository.customview.drag.DragHelperActivity;
 import com.trampcr.developerrepository.customview.drag.DragListenerActivity;
+import com.trampcr.developerrepository.customview.drag.DragToCollectActivity;
+import com.trampcr.developerrepository.customview.drag.DragToCollectLayout;
 import com.trampcr.developerrepository.customview.point.PointTypeEvaluator;
 import com.trampcr.developerrepository.customview.point.PointView;
 import com.trampcr.developerrepository.customview.province.ProvinceTypeEvaluator;
@@ -80,6 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnTwoPagerView;
     private Button mBtnDragListenerGridView;
     private Button mBtnDragHelperGridView;
+    private Button mBtnDragToCollectView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -272,6 +275,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnTwoPagerView = (Button) findViewById(R.id.btn_two_pager_view);
         mBtnDragListenerGridView = (Button) findViewById(R.id.btn_drag_listener_grid_view);
         mBtnDragHelperGridView = (Button) findViewById(R.id.btn_drag_helper_grid_view);
+        mBtnDragToCollectView = (Button) findViewById(R.id.btn_drag_to_collect_view);
     }
 
     private void initListener() {
@@ -286,6 +290,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnTwoPagerView.setOnClickListener(this);
         mBtnDragListenerGridView.setOnClickListener(this);
         mBtnDragHelperGridView.setOnClickListener(this);
+        mBtnDragToCollectView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -407,6 +412,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_drag_helper_grid_view:
                 CommonUtils.startActivity(this, DragHelperActivity.class);
+                break;
+            case R.id.btn_drag_to_collect_view:
+                CommonUtils.startActivity(this, DragToCollectActivity.class);
                 break;
             default:
                 break;

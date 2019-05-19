@@ -55,5 +55,6 @@
     <string name="text_two_pager_view">Two Pager View</string>
     <string name="text_drag_listener_grid_view">Drag Listener Grid View</string>
     <string name="text_drag_helper_grid_view">Drag Helper Grid View</string>
+    <string name="text_drag_to_collect_view">Drag To Collect View</string>
 
 </resources>

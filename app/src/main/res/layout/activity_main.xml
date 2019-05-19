@@ -83,4 +83,11 @@
         android:text="@string/text_drag_helper_grid_view"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btn_drag_to_collect_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_drag_to_collect_view"
+        android:textAllCaps="false" />
+
 </LinearLayout>

@@ -45,6 +45,12 @@ MarginLayoutParams 对象。
 
 8、手写 ViewPager：TwoPagerView
 
+9、拖拽
+
+- DragListenerGridView：使用 DragListener
+- DragHelperGridView：使用 DragViewHelper
+- DragToCollectLayout：使用 DragListener
+
 **二、事件分发**
 
 1、原理
