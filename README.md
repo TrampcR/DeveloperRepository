@@ -48,8 +48,9 @@ MarginLayoutParams 对象。
 9、拖拽
 
 - DragListenerGridView：使用 DragListener
-- DragHelperGridView：使用 DragViewHelper
+- DragHelperGridView：使用 ViewDragHelper
 - DragToCollectLayout：使用 DragListener
+- DragUpDownLayout：使用 ViewDragHelper
 
 **二、事件分发**
 

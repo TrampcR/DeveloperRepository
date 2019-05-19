@@ -35,6 +35,8 @@
         <activity android:name=".customview.drag.DragHelperActivity"/>
 
         <activity android:name=".customview.drag.DragToCollectActivity"/>
+
+        <activity android:name=".customview.drag.DragUpDownActivity"/>
     </application>
 
 </manifest>

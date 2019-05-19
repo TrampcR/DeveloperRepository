@@ -25,6 +25,7 @@ import com.trampcr.developerrepository.customview.drag.DragHelperActivity;
 import com.trampcr.developerrepository.customview.drag.DragListenerActivity;
 import com.trampcr.developerrepository.customview.drag.DragToCollectActivity;
 import com.trampcr.developerrepository.customview.drag.DragToCollectLayout;
+import com.trampcr.developerrepository.customview.drag.DragUpDownActivity;
 import com.trampcr.developerrepository.customview.point.PointTypeEvaluator;
 import com.trampcr.developerrepository.customview.point.PointView;
 import com.trampcr.developerrepository.customview.province.ProvinceTypeEvaluator;
@@ -83,6 +84,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnDragListenerGridView;
     private Button mBtnDragHelperGridView;
     private Button mBtnDragToCollectView;
+    private Button mBtnDragUpDownView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -276,6 +278,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnDragListenerGridView = (Button) findViewById(R.id.btn_drag_listener_grid_view);
         mBtnDragHelperGridView = (Button) findViewById(R.id.btn_drag_helper_grid_view);
         mBtnDragToCollectView = (Button) findViewById(R.id.btn_drag_to_collect_view);
+        mBtnDragUpDownView = (Button) findViewById(R.id.btn_drag_up_down_view);
     }
 
     private void initListener() {
@@ -291,6 +294,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnDragListenerGridView.setOnClickListener(this);
         mBtnDragHelperGridView.setOnClickListener(this);
         mBtnDragToCollectView.setOnClickListener(this);
+        mBtnDragUpDownView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -415,6 +419,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_drag_to_collect_view:
                 CommonUtils.startActivity(this, DragToCollectActivity.class);
+                break;
+            case R.id.btn_drag_up_down_view:
+                CommonUtils.startActivity(this, DragUpDownActivity.class);
                 break;
             default:
                 break;

@@ -56,5 +56,6 @@
     <string name="text_drag_listener_grid_view">Drag Listener Grid View</string>
     <string name="text_drag_helper_grid_view">Drag Helper Grid View</string>
     <string name="text_drag_to_collect_view">Drag To Collect View</string>
+    <string name="text_drag_up_down_view">Drag Up Down View</string>
 
 </resources>
