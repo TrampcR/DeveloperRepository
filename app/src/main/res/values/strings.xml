@@ -58,4 +58,13 @@
     <string name="text_drag_to_collect_view">Drag To Collect View</string>
     <string name="text_drag_up_down_view">Drag Up Down View</string>
 
+    /** thread*/
+    <string name="text_start_load">开始加载</string>
+    <string name="text_cancel_load">取消加载</string>
+    <string name="text_has_cancelled">已取消</string>
+    <string name="text_default">还没开始加载</string>
+    <string name="text_loading">加载中</string>
+    <string name="text_load_success">加载完成</string>
+    <string name="text_async_task_view">Async Task View</string>
+
 </resources>

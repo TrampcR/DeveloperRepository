@@ -61,3 +61,14 @@ MarginLayoutParams 对象。
 2、Demo
 
 ViewGroupDispatchActivity、SubView、SubViewGroup
+
+**三、Android 多线程**
+
+1、AsyncTask
+
+Demo：AsyncTaskActivity
+
+参考：[Android 多线程：手把手教你使用AsyncTask](https://www.jianshu.com/p/ee1342fcf5e7?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin)
+
+
+

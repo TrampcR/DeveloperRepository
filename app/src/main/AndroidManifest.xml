@@ -37,6 +37,8 @@
         <activity android:name=".customview.drag.DragToCollectActivity"/>
 
         <activity android:name=".customview.drag.DragUpDownActivity"/>
+
+        <activity android:name=".thread.asynctask.AsyncTaskActivity"/>
     </application>
 
 </manifest>
