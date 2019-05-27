@@ -104,4 +104,11 @@
         android:text="@string/text_async_task_view"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btn_handler_thread_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_handler_thread_view"
+        android:textAllCaps="false" />
+
 </LinearLayout>

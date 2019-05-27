@@ -43,6 +43,7 @@ import com.trampcr.developerrepository.reflect.ReflectHelper;
 import com.trampcr.developerrepository.retrofitdemo.GitHubService;
 import com.trampcr.developerrepository.retrofitdemo.Repo;
 import com.trampcr.developerrepository.thread.asynctask.AsyncTaskActivity;
+import com.trampcr.developerrepository.thread.handlerthread.HandlerThreadActivity;
 import com.trampcr.developerrepository.utils.CommonUtils;
 import com.trampcr.developerrepository.utils.DimenUtils;
 import com.trampcr.developerrepository.webview.RedirectDemo;
@@ -87,6 +88,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnDragToCollectView;
     private Button mBtnDragUpDownView;
     private Button mBtnAsyncTaskView;
+    private Button mBtnHandlerThreadView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -282,6 +284,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnDragToCollectView = (Button) findViewById(R.id.btn_drag_to_collect_view);
         mBtnDragUpDownView = (Button) findViewById(R.id.btn_drag_up_down_view);
         mBtnAsyncTaskView = (Button) findViewById(R.id.btn_async_task_view);
+        mBtnHandlerThreadView = (Button) findViewById(R.id.btn_handler_thread_view);
     }
 
     private void initListener() {
@@ -299,6 +302,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnDragToCollectView.setOnClickListener(this);
         mBtnDragUpDownView.setOnClickListener(this);
         mBtnAsyncTaskView.setOnClickListener(this);
+        mBtnHandlerThreadView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -429,6 +433,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_async_task_view:
                 CommonUtils.startActivity(this, AsyncTaskActivity.class);
+                break;
+            case R.id.btn_handler_thread_view:
+                CommonUtils.startActivity(this, HandlerThreadActivity.class);
                 break;
             default:
                 break;

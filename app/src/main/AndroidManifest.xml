@@ -39,6 +39,8 @@
         <activity android:name=".customview.drag.DragUpDownActivity"/>
 
         <activity android:name=".thread.asynctask.AsyncTaskActivity"/>
+
+        <activity android:name=".thread.handlerthread.HandlerThreadActivity"/>
     </application>
 
 </manifest>
