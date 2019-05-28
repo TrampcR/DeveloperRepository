@@ -67,5 +67,6 @@
     <string name="text_load_success">加载完成</string>
     <string name="text_async_task_view">Async Task View</string>
     <string name="text_handler_thread_view">Handler Thread View</string>
+    <string name="text_intent_service_view">Intent Service View</string>
 
 </resources>

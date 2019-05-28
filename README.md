@@ -68,11 +68,18 @@ ViewGroupDispatchActivity、SubView、SubViewGroup
 
 Demo：AsyncTaskActivity
 
-参考：[Android 多线程：手把手教你使用AsyncTask](https://www.jianshu.com/p/ee1342fcf5e7?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin)
+参考：[Android 多线程：手把手教你使用 AsyncTask](https://www.jianshu.com/p/ee1342fcf5e7?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin)
 
 2、HandlerThread
 
 Demo：HandlerThreadActivity
 
-参考：[Android多线程：手把手教你使用HandlerThread](https://www.jianshu.com/p/9c10beaa1c95)
+参考：[Android 多线程：手把手教你使用 HandlerThread](https://www.jianshu.com/p/9c10beaa1c95)
 
+3、IntentService
+
+Demo：IntentServiceActivity
+
+参考：[Android 多线程：IntentService 使用教程](https://www.jianshu.com/p/af62781fefba)
+
+这里有一个报错：Service Intent must be explicit，解决方法参考：[Android “Service Intent must be explicit”解决办法](https://blog.csdn.net/u013058549/article/details/54949500)

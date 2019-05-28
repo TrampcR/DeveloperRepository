@@ -41,6 +41,14 @@
         <activity android:name=".thread.asynctask.AsyncTaskActivity"/>
 
         <activity android:name=".thread.handlerthread.HandlerThreadActivity"/>
+
+        <activity android:name=".thread.intentservice.IntentServiceActivity"/>
+
+        <service android:name=".thread.intentservice.MyIntentService">
+            <intent-filter>
+                <action android:name="com.trampcr.is.demo"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

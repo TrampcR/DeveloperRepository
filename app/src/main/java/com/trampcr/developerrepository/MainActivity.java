@@ -44,6 +44,7 @@ import com.trampcr.developerrepository.retrofitdemo.GitHubService;
 import com.trampcr.developerrepository.retrofitdemo.Repo;
 import com.trampcr.developerrepository.thread.asynctask.AsyncTaskActivity;
 import com.trampcr.developerrepository.thread.handlerthread.HandlerThreadActivity;
+import com.trampcr.developerrepository.thread.intentservice.IntentServiceActivity;
 import com.trampcr.developerrepository.utils.CommonUtils;
 import com.trampcr.developerrepository.utils.DimenUtils;
 import com.trampcr.developerrepository.webview.RedirectDemo;
@@ -89,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnDragUpDownView;
     private Button mBtnAsyncTaskView;
     private Button mBtnHandlerThreadView;
+    private Button mBtnIntentServiceView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -285,6 +287,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnDragUpDownView = (Button) findViewById(R.id.btn_drag_up_down_view);
         mBtnAsyncTaskView = (Button) findViewById(R.id.btn_async_task_view);
         mBtnHandlerThreadView = (Button) findViewById(R.id.btn_handler_thread_view);
+        mBtnIntentServiceView = (Button) findViewById(R.id.btn_intent_service_view);
     }
 
     private void initListener() {
@@ -303,6 +306,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnDragUpDownView.setOnClickListener(this);
         mBtnAsyncTaskView.setOnClickListener(this);
         mBtnHandlerThreadView.setOnClickListener(this);
+        mBtnIntentServiceView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -436,6 +440,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_handler_thread_view:
                 CommonUtils.startActivity(this, HandlerThreadActivity.class);
+                break;
+            case R.id.btn_intent_service_view:
+                CommonUtils.startActivity(this, IntentServiceActivity.class);
                 break;
             default:
                 break;
