@@ -83,3 +83,9 @@ Demo：IntentServiceActivity
 参考：[Android 多线程：IntentService 使用教程](https://www.jianshu.com/p/af62781fefba)
 
 这里有一个报错：Service Intent must be explicit，解决方法参考：[Android “Service Intent must be explicit”解决办法](https://blog.csdn.net/u013058549/article/details/54949500)
+
+4、ThreadLocal
+
+Demo：ThreadLocalActivity
+
+参考：[Java多线程：带你了解神秘的线程变量 ThreadLocal](https://www.jianshu.com/p/22be9653df3f)

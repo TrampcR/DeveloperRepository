@@ -45,6 +45,7 @@ import com.trampcr.developerrepository.retrofitdemo.Repo;
 import com.trampcr.developerrepository.thread.asynctask.AsyncTaskActivity;
 import com.trampcr.developerrepository.thread.handlerthread.HandlerThreadActivity;
 import com.trampcr.developerrepository.thread.intentservice.IntentServiceActivity;
+import com.trampcr.developerrepository.thread.threadlocal.ThreadLocalActivity;
 import com.trampcr.developerrepository.utils.CommonUtils;
 import com.trampcr.developerrepository.utils.DimenUtils;
 import com.trampcr.developerrepository.webview.RedirectDemo;
@@ -91,6 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnAsyncTaskView;
     private Button mBtnHandlerThreadView;
     private Button mBtnIntentServiceView;
+    private Button mBtnThreadLocalView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -288,6 +290,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnAsyncTaskView = (Button) findViewById(R.id.btn_async_task_view);
         mBtnHandlerThreadView = (Button) findViewById(R.id.btn_handler_thread_view);
         mBtnIntentServiceView = (Button) findViewById(R.id.btn_intent_service_view);
+        mBtnThreadLocalView = (Button) findViewById(R.id.btn_thread_local_view);
     }
 
     private void initListener() {
@@ -307,6 +310,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnAsyncTaskView.setOnClickListener(this);
         mBtnHandlerThreadView.setOnClickListener(this);
         mBtnIntentServiceView.setOnClickListener(this);
+        mBtnThreadLocalView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -443,6 +447,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_intent_service_view:
                 CommonUtils.startActivity(this, IntentServiceActivity.class);
+                break;
+            case R.id.btn_thread_local_view:
+                CommonUtils.startActivity(this, ThreadLocalActivity.class);
                 break;
             default:
                 break;
