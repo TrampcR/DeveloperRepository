@@ -38,6 +38,8 @@ import com.trampcr.developerrepository.customview.touch.TouchView;
 import com.trampcr.developerrepository.customview.touch.dispatchdemo.ViewGroupDispatchActivity;
 import com.trampcr.developerrepository.customview.viewpager.TwoPagerActivity;
 import com.trampcr.developerrepository.list.ForRemove;
+import com.trampcr.developerrepository.listview.ArrayAdapterActivity;
+import com.trampcr.developerrepository.listview.SimpleAdapterActivity;
 import com.trampcr.developerrepository.reflect.Person;
 import com.trampcr.developerrepository.reflect.ReflectHelper;
 import com.trampcr.developerrepository.retrofitdemo.GitHubService;
@@ -93,6 +95,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnHandlerThreadView;
     private Button mBtnIntentServiceView;
     private Button mBtnThreadLocalView;
+    private Button mBtnListArrayAdapterView;
+    private Button mBtnListSimpleAdapterView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -291,6 +295,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnHandlerThreadView = (Button) findViewById(R.id.btn_handler_thread_view);
         mBtnIntentServiceView = (Button) findViewById(R.id.btn_intent_service_view);
         mBtnThreadLocalView = (Button) findViewById(R.id.btn_thread_local_view);
+        mBtnListArrayAdapterView = (Button) findViewById(R.id.btn_list_array_adapter_view);
+        mBtnListSimpleAdapterView = (Button) findViewById(R.id.btn_list_simple_adapter_view);
     }
 
     private void initListener() {
@@ -311,6 +317,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnHandlerThreadView.setOnClickListener(this);
         mBtnIntentServiceView.setOnClickListener(this);
         mBtnThreadLocalView.setOnClickListener(this);
+        mBtnListArrayAdapterView.setOnClickListener(this);
+        mBtnListSimpleAdapterView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -450,6 +458,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_thread_local_view:
                 CommonUtils.startActivity(this, ThreadLocalActivity.class);
+                break;
+            case R.id.btn_list_array_adapter_view:
+                CommonUtils.startActivity(this, ArrayAdapterActivity.class);
+                break;
+            case R.id.btn_list_simple_adapter_view:
+                CommonUtils.startActivity(this, SimpleAdapterActivity.class);
                 break;
             default:
                 break;

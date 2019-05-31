@@ -89,3 +89,9 @@ Demo：IntentServiceActivity
 Demo：ThreadLocalActivity
 
 参考：[Java多线程：带你了解神秘的线程变量 ThreadLocal](https://www.jianshu.com/p/22be9653df3f)
+
+**四、ListView 与 RecyclerView**
+
+1、ListView
+
+Demo：ArrayAdapterActivity、SimpleAdapterActivity
