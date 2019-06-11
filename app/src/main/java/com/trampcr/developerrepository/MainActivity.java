@@ -39,6 +39,7 @@ import com.trampcr.developerrepository.customview.touch.dispatchdemo.ViewGroupDi
 import com.trampcr.developerrepository.customview.viewpager.TwoPagerActivity;
 import com.trampcr.developerrepository.list.ForRemove;
 import com.trampcr.developerrepository.listview.ArrayAdapterActivity;
+import com.trampcr.developerrepository.listview.BaseAdapterActivity;
 import com.trampcr.developerrepository.listview.SimpleAdapterActivity;
 import com.trampcr.developerrepository.reflect.Person;
 import com.trampcr.developerrepository.reflect.ReflectHelper;
@@ -97,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnThreadLocalView;
     private Button mBtnListArrayAdapterView;
     private Button mBtnListSimpleAdapterView;
+    private Button mBtnListBaseAdapterView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -297,6 +299,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnThreadLocalView = (Button) findViewById(R.id.btn_thread_local_view);
         mBtnListArrayAdapterView = (Button) findViewById(R.id.btn_list_array_adapter_view);
         mBtnListSimpleAdapterView = (Button) findViewById(R.id.btn_list_simple_adapter_view);
+        mBtnListBaseAdapterView = (Button) findViewById(R.id.btn_list_base_adapter_view);
     }
 
     private void initListener() {
@@ -319,6 +322,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnThreadLocalView.setOnClickListener(this);
         mBtnListArrayAdapterView.setOnClickListener(this);
         mBtnListSimpleAdapterView.setOnClickListener(this);
+        mBtnListBaseAdapterView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -464,6 +468,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_list_simple_adapter_view:
                 CommonUtils.startActivity(this, SimpleAdapterActivity.class);
+                break;
+            case R.id.btn_list_base_adapter_view:
+                CommonUtils.startActivity(this, BaseAdapterActivity.class);
                 break;
             default:
                 break;

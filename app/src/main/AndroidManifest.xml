@@ -50,6 +50,8 @@
 
         <activity android:name=".listview.SimpleAdapterActivity"/>
 
+        <activity android:name=".listview.BaseAdapterActivity"/>
+
         <service android:name=".thread.intentservice.MyIntentService">
             <intent-filter>
                 <action android:name="com.trampcr.is.demo"/>

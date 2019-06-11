@@ -69,7 +69,10 @@
     <string name="text_handler_thread_view">Handler Thread View</string>
     <string name="text_intent_service_view">Intent Service View</string>
     <string name="text_thread_local_view">Thread Local View</string>
+
+    <!-- listview -->
     <string name="text_list_array_adapter_view">List Array Adapter View</string>
     <string name="text_list_simple_adapter_view">List Simple Adapter View</string>
+    <string name="text_list_base_adapter_view">List Base Adapter View</string>
 
 </resources>

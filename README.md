@@ -94,4 +94,4 @@ Demo：ThreadLocalActivity
 
 1、ListView
 
-Demo：ArrayAdapterActivity、SimpleAdapterActivity
+Demo：ArrayAdapterActivity、SimpleAdapterActivity、BaseAdapterActivity

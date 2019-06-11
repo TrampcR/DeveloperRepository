@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_1_base_adapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="14dp"
+        android:text="name"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:id="@+id/tv_2_base_adapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_1_base_adapter"
+        android:paddingLeft="14dp"
+        android:text="address"
+        android:textSize="17sp"/>
+
+    <ImageView
+        android:id="@+id/iv_base_adapter"
+        android:layout_width="115dp"
+        android:layout_height="86dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_launcher"/>
+
+    <Button
+        android:id="@+id/btn_base_adapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/iv_base_adapter"
+        android:text="Button"
+        android:textAllCaps="false"/>
+
+</RelativeLayout>
