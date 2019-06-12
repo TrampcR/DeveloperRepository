@@ -58,7 +58,7 @@
     <string name="text_drag_to_collect_view">Drag To Collect View</string>
     <string name="text_drag_up_down_view">Drag Up Down View</string>
 
-    /** thread*/
+    <!-- thread -->
     <string name="text_start_load">开始加载</string>
     <string name="text_cancel_load">取消加载</string>
     <string name="text_has_cancelled">已取消</string>
@@ -74,5 +74,8 @@
     <string name="text_list_array_adapter_view">List Array Adapter View</string>
     <string name="text_list_simple_adapter_view">List Simple Adapter View</string>
     <string name="text_list_base_adapter_view">List Base Adapter View</string>
+
+    <!-- retrofit -->
+    <string name="text_get_request_iciba_view">Get Request Iciba View</string>
 
 </resources>

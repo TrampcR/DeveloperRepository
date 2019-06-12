@@ -95,3 +95,9 @@ Demo：ThreadLocalActivity
 1、ListView
 
 Demo：ArrayAdapterActivity、SimpleAdapterActivity、BaseAdapterActivity
+
+**五、网络请求**
+
+1、Retrofit
+
+- GET Request Demo

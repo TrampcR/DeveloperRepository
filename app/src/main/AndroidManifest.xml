@@ -52,6 +52,8 @@
 
         <activity android:name=".listview.BaseAdapterActivity"/>
 
+        <activity android:name=".retrofitdemo.GetRequestIciba"/>
+
         <service android:name=".thread.intentservice.MyIntentService">
             <intent-filter>
                 <action android:name="com.trampcr.is.demo"/>

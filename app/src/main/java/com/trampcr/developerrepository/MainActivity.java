@@ -24,14 +24,12 @@ import com.trampcr.developerrepository.customview.CameraAnimationView;
 import com.trampcr.developerrepository.customview.drag.DragHelperActivity;
 import com.trampcr.developerrepository.customview.drag.DragListenerActivity;
 import com.trampcr.developerrepository.customview.drag.DragToCollectActivity;
-import com.trampcr.developerrepository.customview.drag.DragToCollectLayout;
 import com.trampcr.developerrepository.customview.drag.DragUpDownActivity;
 import com.trampcr.developerrepository.customview.point.PointTypeEvaluator;
 import com.trampcr.developerrepository.customview.point.PointView;
 import com.trampcr.developerrepository.customview.province.ProvinceTypeEvaluator;
 import com.trampcr.developerrepository.customview.province.ProvinceView;
 import com.trampcr.developerrepository.customview.touch.CooperateMultiTouchActivity;
-import com.trampcr.developerrepository.customview.touch.CooperateMultiTouchView;
 import com.trampcr.developerrepository.customview.touch.RelayMultiTouchActivity;
 import com.trampcr.developerrepository.customview.touch.SelfMultiTouchActivity;
 import com.trampcr.developerrepository.customview.touch.TouchView;
@@ -43,8 +41,7 @@ import com.trampcr.developerrepository.listview.BaseAdapterActivity;
 import com.trampcr.developerrepository.listview.SimpleAdapterActivity;
 import com.trampcr.developerrepository.reflect.Person;
 import com.trampcr.developerrepository.reflect.ReflectHelper;
-import com.trampcr.developerrepository.retrofitdemo.GitHubService;
-import com.trampcr.developerrepository.retrofitdemo.Repo;
+import com.trampcr.developerrepository.retrofitdemo.GetRequestIciba;
 import com.trampcr.developerrepository.thread.asynctask.AsyncTaskActivity;
 import com.trampcr.developerrepository.thread.handlerthread.HandlerThreadActivity;
 import com.trampcr.developerrepository.thread.intentservice.IntentServiceActivity;
@@ -59,14 +56,11 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.List;
 
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import retrofit2.Call;
-import retrofit2.Retrofit;
 
 import static android.view.KeyEvent.KEYCODE_BACK;
 
@@ -99,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnListArrayAdapterView;
     private Button mBtnListSimpleAdapterView;
     private Button mBtnListBaseAdapterView;
+    private Button mBtnGetRequestIcibaView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -300,6 +295,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnListArrayAdapterView = (Button) findViewById(R.id.btn_list_array_adapter_view);
         mBtnListSimpleAdapterView = (Button) findViewById(R.id.btn_list_simple_adapter_view);
         mBtnListBaseAdapterView = (Button) findViewById(R.id.btn_list_base_adapter_view);
+        mBtnGetRequestIcibaView = (Button) findViewById(R.id.btn_get_request_iciba_view);
     }
 
     private void initListener() {
@@ -323,6 +319,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnListArrayAdapterView.setOnClickListener(this);
         mBtnListSimpleAdapterView.setOnClickListener(this);
         mBtnListBaseAdapterView.setOnClickListener(this);
+        mBtnGetRequestIcibaView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -377,21 +374,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             }
         });
-    }
-
-    private void testRetrofit() {
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://api.github.com/")
-//                .addConverterFactory()
-                .build();
-        GitHubService gitHubService = retrofit.create(GitHubService.class);
-
-        Call<List<Repo>> call = gitHubService.listRepos("octocat");
-        try {
-            List<Repo> repos = call.execute().body();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     @Override
@@ -471,6 +453,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_list_base_adapter_view:
                 CommonUtils.startActivity(this, BaseAdapterActivity.class);
+                break;
+            case R.id.btn_get_request_iciba_view:
+                CommonUtils.startActivity(this, GetRequestIciba.class);
                 break;
             default:
                 break;

@@ -20,9 +20,10 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.dianping.android.sdk:logan:1.1.0'
     compile 'com.squareup.retrofit2:retrofit:2.5.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
 }
