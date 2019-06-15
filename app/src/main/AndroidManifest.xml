@@ -54,6 +54,8 @@
 
         <activity android:name=".retrofitdemo.GetRequestIciba"/>
 
+        <activity android:name=".imagerepo.PicassoActivity"/>
+
         <service android:name=".thread.intentservice.MyIntentService">
             <intent-filter>
                 <action android:name="com.trampcr.is.demo"/>

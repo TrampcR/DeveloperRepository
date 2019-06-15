@@ -78,4 +78,7 @@
     <!-- retrofit -->
     <string name="text_get_request_iciba_view">Get Request Iciba View</string>
 
+    <!-- picasso -->
+    <string name="text_picasso_view">Picasso View</string>
+
 </resources>

@@ -35,6 +35,7 @@ import com.trampcr.developerrepository.customview.touch.SelfMultiTouchActivity;
 import com.trampcr.developerrepository.customview.touch.TouchView;
 import com.trampcr.developerrepository.customview.touch.dispatchdemo.ViewGroupDispatchActivity;
 import com.trampcr.developerrepository.customview.viewpager.TwoPagerActivity;
+import com.trampcr.developerrepository.imagerepo.PicassoActivity;
 import com.trampcr.developerrepository.list.ForRemove;
 import com.trampcr.developerrepository.listview.ArrayAdapterActivity;
 import com.trampcr.developerrepository.listview.BaseAdapterActivity;
@@ -94,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnListSimpleAdapterView;
     private Button mBtnListBaseAdapterView;
     private Button mBtnGetRequestIcibaView;
+    private Button mBtnPicassoView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -296,6 +298,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnListSimpleAdapterView = (Button) findViewById(R.id.btn_list_simple_adapter_view);
         mBtnListBaseAdapterView = (Button) findViewById(R.id.btn_list_base_adapter_view);
         mBtnGetRequestIcibaView = (Button) findViewById(R.id.btn_get_request_iciba_view);
+        mBtnPicassoView = (Button) findViewById(R.id.btn_picasso_view);
     }
 
     private void initListener() {
@@ -320,6 +323,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnListSimpleAdapterView.setOnClickListener(this);
         mBtnListBaseAdapterView.setOnClickListener(this);
         mBtnGetRequestIcibaView.setOnClickListener(this);
+        mBtnPicassoView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -456,6 +460,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_get_request_iciba_view:
                 CommonUtils.startActivity(this, GetRequestIciba.class);
+                break;
+            case R.id.btn_picasso_view:
+                CommonUtils.startActivity(this, PicassoActivity.class);
                 break;
             default:
                 break;
