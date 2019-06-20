@@ -35,6 +35,7 @@ import com.trampcr.developerrepository.customview.touch.SelfMultiTouchActivity;
 import com.trampcr.developerrepository.customview.touch.TouchView;
 import com.trampcr.developerrepository.customview.touch.dispatchdemo.ViewGroupDispatchActivity;
 import com.trampcr.developerrepository.customview.viewpager.TwoPagerActivity;
+import com.trampcr.developerrepository.imagerepo.GlideActivity;
 import com.trampcr.developerrepository.imagerepo.PicassoActivity;
 import com.trampcr.developerrepository.list.ForRemove;
 import com.trampcr.developerrepository.listview.ArrayAdapterActivity;
@@ -96,6 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnListBaseAdapterView;
     private Button mBtnGetRequestIcibaView;
     private Button mBtnPicassoView;
+    private Button mBtnGlideView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -299,6 +301,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnListBaseAdapterView = (Button) findViewById(R.id.btn_list_base_adapter_view);
         mBtnGetRequestIcibaView = (Button) findViewById(R.id.btn_get_request_iciba_view);
         mBtnPicassoView = (Button) findViewById(R.id.btn_picasso_view);
+        mBtnGlideView = (Button) findViewById(R.id.btn_glide_view);
     }
 
     private void initListener() {
@@ -324,6 +327,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnListBaseAdapterView.setOnClickListener(this);
         mBtnGetRequestIcibaView.setOnClickListener(this);
         mBtnPicassoView.setOnClickListener(this);
+        mBtnGlideView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -463,6 +467,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_picasso_view:
                 CommonUtils.startActivity(this, PicassoActivity.class);
+                break;
+            case R.id.btn_glide_view:
+                CommonUtils.startActivity(this, GlideActivity.class);
                 break;
             default:
                 break;

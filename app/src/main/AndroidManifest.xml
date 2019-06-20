@@ -56,6 +56,8 @@
 
         <activity android:name=".imagerepo.PicassoActivity"/>
 
+        <activity android:name=".imagerepo.GlideActivity"/>
+
         <service android:name=".thread.intentservice.MyIntentService">
             <intent-filter>
                 <action android:name="com.trampcr.is.demo"/>

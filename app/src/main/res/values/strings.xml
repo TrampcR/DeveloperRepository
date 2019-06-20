@@ -75,10 +75,11 @@
     <string name="text_list_simple_adapter_view">List Simple Adapter View</string>
     <string name="text_list_base_adapter_view">List Base Adapter View</string>
 
-    <!-- retrofit -->
+    <!-- network request repo -->
     <string name="text_get_request_iciba_view">Get Request Iciba View</string>
 
-    <!-- picasso -->
+    <!-- picture repo -->
     <string name="text_picasso_view">Picasso View</string>
+    <string name="text_glide_view">Glide View</string>
 
 </resources>
