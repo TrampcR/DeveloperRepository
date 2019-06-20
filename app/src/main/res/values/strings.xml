@@ -82,4 +82,6 @@
     <string name="text_picasso_view">Picasso View</string>
     <string name="text_glide_view">Glide View</string>
 
+    <string name="text_reflect_view">Reflect View</string>
+
 </resources>

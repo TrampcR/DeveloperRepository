@@ -42,6 +42,7 @@ import com.trampcr.developerrepository.listview.ArrayAdapterActivity;
 import com.trampcr.developerrepository.listview.BaseAdapterActivity;
 import com.trampcr.developerrepository.listview.SimpleAdapterActivity;
 import com.trampcr.developerrepository.reflect.Person;
+import com.trampcr.developerrepository.reflect.ReflectActivity;
 import com.trampcr.developerrepository.reflect.ReflectHelper;
 import com.trampcr.developerrepository.retrofitdemo.GetRequestIciba;
 import com.trampcr.developerrepository.thread.asynctask.AsyncTaskActivity;
@@ -98,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnGetRequestIcibaView;
     private Button mBtnPicassoView;
     private Button mBtnGlideView;
+    private Button mBtnReflectView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -302,6 +304,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnGetRequestIcibaView = (Button) findViewById(R.id.btn_get_request_iciba_view);
         mBtnPicassoView = (Button) findViewById(R.id.btn_picasso_view);
         mBtnGlideView = (Button) findViewById(R.id.btn_glide_view);
+        mBtnReflectView = (Button) findViewById(R.id.btn_reflect_view);
     }
 
     private void initListener() {
@@ -328,6 +331,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnGetRequestIcibaView.setOnClickListener(this);
         mBtnPicassoView.setOnClickListener(this);
         mBtnGlideView.setOnClickListener(this);
+        mBtnReflectView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -470,6 +474,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_glide_view:
                 CommonUtils.startActivity(this, GlideActivity.class);
+                break;
+            case R.id.btn_reflect_view:
+                CommonUtils.startActivity(this, ReflectActivity.class);
                 break;
             default:
                 break;
