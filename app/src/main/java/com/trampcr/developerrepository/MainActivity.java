@@ -41,7 +41,8 @@ import com.trampcr.developerrepository.listview.BaseAdapterActivity;
 import com.trampcr.developerrepository.listview.SimpleAdapterActivity;
 import com.trampcr.developerrepository.reflect.Person;
 import com.trampcr.developerrepository.reflect.ReflectHelper;
-import com.trampcr.developerrepository.retrofitdemo.GetRequestIciba;
+import com.trampcr.developerrepository.retrofitdemo.GetRequestIcibaActivity;
+import com.trampcr.developerrepository.retrofitdemo.PostRequestYouDaoActivity;
 import com.trampcr.developerrepository.thread.asynctask.AsyncTaskActivity;
 import com.trampcr.developerrepository.thread.handlerthread.HandlerThreadActivity;
 import com.trampcr.developerrepository.thread.intentservice.IntentServiceActivity;
@@ -94,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnListSimpleAdapterView;
     private Button mBtnListBaseAdapterView;
     private Button mBtnGetRequestIcibaView;
+    private Button mBtnPostRequestYoudaoView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -296,6 +298,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnListSimpleAdapterView = (Button) findViewById(R.id.btn_list_simple_adapter_view);
         mBtnListBaseAdapterView = (Button) findViewById(R.id.btn_list_base_adapter_view);
         mBtnGetRequestIcibaView = (Button) findViewById(R.id.btn_get_request_iciba_view);
+        mBtnPostRequestYoudaoView = (Button) findViewById(R.id.btn_post_request_youdao_view);
     }
 
     private void initListener() {
@@ -320,6 +323,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnListSimpleAdapterView.setOnClickListener(this);
         mBtnListBaseAdapterView.setOnClickListener(this);
         mBtnGetRequestIcibaView.setOnClickListener(this);
+        mBtnPostRequestYoudaoView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -455,7 +459,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 CommonUtils.startActivity(this, BaseAdapterActivity.class);
                 break;
             case R.id.btn_get_request_iciba_view:
-                CommonUtils.startActivity(this, GetRequestIciba.class);
+                CommonUtils.startActivity(this, GetRequestIcibaActivity.class);
+                break;
+            case R.id.btn_post_request_youdao_view:
+                CommonUtils.startActivity(this, PostRequestYouDaoActivity.class);
                 break;
             default:
                 break;

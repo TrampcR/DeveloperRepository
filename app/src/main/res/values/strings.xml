@@ -77,5 +77,6 @@
 
     <!-- retrofit -->
     <string name="text_get_request_iciba_view">Get Request Iciba View</string>
+    <string name="text_post_request_youdao_view">Post Request Youdao View</string>
 
 </resources>

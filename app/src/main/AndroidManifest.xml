@@ -52,7 +52,9 @@
 
         <activity android:name=".listview.BaseAdapterActivity"/>
 
-        <activity android:name=".retrofitdemo.GetRequestIciba"/>
+        <activity android:name=".retrofitdemo.GetRequestIcibaActivity"/>
+
+        <activity android:name=".retrofitdemo.PostRequestYouDaoActivity"/>
 
         <service android:name=".thread.intentservice.MyIntentService">
             <intent-filter>
