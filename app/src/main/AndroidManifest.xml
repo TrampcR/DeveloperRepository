@@ -56,6 +56,12 @@
 
         <activity android:name=".retrofitdemo.PostRequestYouDaoActivity"/>
 
+        <activity android:name=".imagerepo.PicassoActivity"/>
+
+        <activity android:name=".imagerepo.GlideActivity"/>
+
+        <activity android:name=".reflect.ReflectActivity"/>
+
         <service android:name=".thread.intentservice.MyIntentService">
             <intent-filter>
                 <action android:name="com.trampcr.is.demo"/>

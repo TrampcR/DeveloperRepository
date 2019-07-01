@@ -35,11 +35,14 @@ import com.trampcr.developerrepository.customview.touch.SelfMultiTouchActivity;
 import com.trampcr.developerrepository.customview.touch.TouchView;
 import com.trampcr.developerrepository.customview.touch.dispatchdemo.ViewGroupDispatchActivity;
 import com.trampcr.developerrepository.customview.viewpager.TwoPagerActivity;
+import com.trampcr.developerrepository.imagerepo.GlideActivity;
+import com.trampcr.developerrepository.imagerepo.PicassoActivity;
 import com.trampcr.developerrepository.list.ForRemove;
 import com.trampcr.developerrepository.listview.ArrayAdapterActivity;
 import com.trampcr.developerrepository.listview.BaseAdapterActivity;
 import com.trampcr.developerrepository.listview.SimpleAdapterActivity;
 import com.trampcr.developerrepository.reflect.Person;
+import com.trampcr.developerrepository.reflect.ReflectActivity;
 import com.trampcr.developerrepository.reflect.ReflectHelper;
 import com.trampcr.developerrepository.retrofitdemo.GetRequestIcibaActivity;
 import com.trampcr.developerrepository.retrofitdemo.PostRequestYouDaoActivity;
@@ -96,6 +99,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnListBaseAdapterView;
     private Button mBtnGetRequestIcibaView;
     private Button mBtnPostRequestYoudaoView;
+    private Button mBtnPicassoView;
+    private Button mBtnGlideView;
+    private Button mBtnReflectView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -299,6 +305,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnListBaseAdapterView = (Button) findViewById(R.id.btn_list_base_adapter_view);
         mBtnGetRequestIcibaView = (Button) findViewById(R.id.btn_get_request_iciba_view);
         mBtnPostRequestYoudaoView = (Button) findViewById(R.id.btn_post_request_youdao_view);
+        mBtnPicassoView = (Button) findViewById(R.id.btn_picasso_view);
+        mBtnGlideView = (Button) findViewById(R.id.btn_glide_view);
+        mBtnReflectView = (Button) findViewById(R.id.btn_reflect_view);
     }
 
     private void initListener() {
@@ -324,6 +333,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnListBaseAdapterView.setOnClickListener(this);
         mBtnGetRequestIcibaView.setOnClickListener(this);
         mBtnPostRequestYoudaoView.setOnClickListener(this);
+        mBtnPicassoView.setOnClickListener(this);
+        mBtnGlideView.setOnClickListener(this);
+        mBtnReflectView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -463,6 +475,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_post_request_youdao_view:
                 CommonUtils.startActivity(this, PostRequestYouDaoActivity.class);
+                break;
+            case R.id.btn_picasso_view:
+                CommonUtils.startActivity(this, PicassoActivity.class);
+                break;
+            case R.id.btn_glide_view:
+                CommonUtils.startActivity(this, GlideActivity.class);
+                break;
+            case R.id.btn_reflect_view:
+                CommonUtils.startActivity(this, ReflectActivity.class);
                 break;
             default:
                 break;
