@@ -41,6 +41,7 @@ import com.trampcr.developerrepository.list.ForRemove;
 import com.trampcr.developerrepository.listview.ArrayAdapterActivity;
 import com.trampcr.developerrepository.listview.BaseAdapterActivity;
 import com.trampcr.developerrepository.listview.SimpleAdapterActivity;
+import com.trampcr.developerrepository.proxy.DynamicProxyActivity;
 import com.trampcr.developerrepository.reflect.Person;
 import com.trampcr.developerrepository.reflect.ReflectActivity;
 import com.trampcr.developerrepository.reflect.ReflectHelper;
@@ -102,6 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnPicassoView;
     private Button mBtnGlideView;
     private Button mBtnReflectView;
+    private Button mBtnDynamicProxyView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -308,6 +310,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnPicassoView = (Button) findViewById(R.id.btn_picasso_view);
         mBtnGlideView = (Button) findViewById(R.id.btn_glide_view);
         mBtnReflectView = (Button) findViewById(R.id.btn_reflect_view);
+        mBtnDynamicProxyView = (Button) findViewById(R.id.btn_dynamic_proxy_view);
     }
 
     private void initListener() {
@@ -336,6 +339,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnPicassoView.setOnClickListener(this);
         mBtnGlideView.setOnClickListener(this);
         mBtnReflectView.setOnClickListener(this);
+        mBtnDynamicProxyView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -484,6 +488,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_reflect_view:
                 CommonUtils.startActivity(this, ReflectActivity.class);
+                break;
+            case R.id.btn_dynamic_proxy_view:
+                CommonUtils.startActivity(this, DynamicProxyActivity.class);
                 break;
             default:
                 break;

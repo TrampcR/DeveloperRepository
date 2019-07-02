@@ -84,5 +84,6 @@
     <string name="text_glide_view">Glide View</string>
 
     <string name="text_reflect_view">Reflect View</string>
+    <string name="text_dynamic_proxy_view">Dynamic Proxy View</string>
 
 </resources>

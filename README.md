@@ -102,3 +102,7 @@ Demo：ArrayAdapterActivity、SimpleAdapterActivity、BaseAdapterActivity
 
 - GET Request Demo
 - POST Request Demo
+
+**六、设计模式**
+
+1、动态代理：DynamicProxyActivity

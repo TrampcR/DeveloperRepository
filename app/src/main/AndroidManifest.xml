@@ -62,6 +62,8 @@
 
         <activity android:name=".reflect.ReflectActivity"/>
 
+        <activity android:name=".proxy.DynamicProxyActivity"/>
+
         <service android:name=".thread.intentservice.MyIntentService">
             <intent-filter>
                 <action android:name="com.trampcr.is.demo"/>
