@@ -47,6 +47,7 @@ import com.trampcr.developerrepository.reflect.ReflectActivity;
 import com.trampcr.developerrepository.reflect.ReflectHelper;
 import com.trampcr.developerrepository.retrofitdemo.GetRequestIcibaActivity;
 import com.trampcr.developerrepository.retrofitdemo.PostRequestYouDaoActivity;
+import com.trampcr.developerrepository.rxjava.RxJavaActivity;
 import com.trampcr.developerrepository.thread.asynctask.AsyncTaskActivity;
 import com.trampcr.developerrepository.thread.handlerthread.HandlerThreadActivity;
 import com.trampcr.developerrepository.thread.intentservice.IntentServiceActivity;
@@ -104,6 +105,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnGlideView;
     private Button mBtnReflectView;
     private Button mBtnDynamicProxyView;
+    private Button mBtnRxJavaView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -311,6 +313,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnGlideView = (Button) findViewById(R.id.btn_glide_view);
         mBtnReflectView = (Button) findViewById(R.id.btn_reflect_view);
         mBtnDynamicProxyView = (Button) findViewById(R.id.btn_dynamic_proxy_view);
+        mBtnRxJavaView = (Button) findViewById(R.id.btn_rx_java_view);
     }
 
     private void initListener() {
@@ -340,6 +343,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnGlideView.setOnClickListener(this);
         mBtnReflectView.setOnClickListener(this);
         mBtnDynamicProxyView.setOnClickListener(this);
+        mBtnRxJavaView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -491,6 +495,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_dynamic_proxy_view:
                 CommonUtils.startActivity(this, DynamicProxyActivity.class);
+                break;
+            case R.id.btn_rx_java_view:
+                CommonUtils.startActivity(this, RxJavaActivity.class);
                 break;
             default:
                 break;
