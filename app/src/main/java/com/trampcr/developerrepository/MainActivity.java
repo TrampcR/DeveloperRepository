@@ -37,6 +37,7 @@ import com.trampcr.developerrepository.customview.touch.dispatchdemo.ViewGroupDi
 import com.trampcr.developerrepository.customview.viewpager.TwoPagerActivity;
 import com.trampcr.developerrepository.imagerepo.GlideActivity;
 import com.trampcr.developerrepository.imagerepo.PicassoActivity;
+import com.trampcr.developerrepository.ipc.messenger.MessengerActivity;
 import com.trampcr.developerrepository.list.ForRemove;
 import com.trampcr.developerrepository.listview.ArrayAdapterActivity;
 import com.trampcr.developerrepository.listview.BaseAdapterActivity;
@@ -106,6 +107,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnReflectView;
     private Button mBtnDynamicProxyView;
     private Button mBtnRxJavaView;
+    private Button mBtnMessengerView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -314,6 +316,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnReflectView = (Button) findViewById(R.id.btn_reflect_view);
         mBtnDynamicProxyView = (Button) findViewById(R.id.btn_dynamic_proxy_view);
         mBtnRxJavaView = (Button) findViewById(R.id.btn_rx_java_view);
+        mBtnMessengerView = (Button) findViewById(R.id.btn_messenger_view);
     }
 
     private void initListener() {
@@ -344,6 +347,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnReflectView.setOnClickListener(this);
         mBtnDynamicProxyView.setOnClickListener(this);
         mBtnRxJavaView.setOnClickListener(this);
+        mBtnMessengerView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -498,6 +502,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_rx_java_view:
                 CommonUtils.startActivity(this, RxJavaActivity.class);
+                break;
+            case R.id.btn_messenger_view:
+                CommonUtils.startActivity(this, MessengerActivity.class);
                 break;
             default:
                 break;

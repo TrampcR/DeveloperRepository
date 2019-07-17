@@ -87,4 +87,7 @@
     <string name="text_dynamic_proxy_view">Dynamic Proxy View</string>
     <string name="text_rx_java_view">RxJava View</string>
 
+    <!-- ipc -->
+    <string name="text_messenger_view">Messenger View</string>
+
 </resources>

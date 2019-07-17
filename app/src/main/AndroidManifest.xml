@@ -66,11 +66,16 @@
 
         <activity android:name=".rxjava.RxJavaActivity"/>
 
+        <activity android:name=".ipc.messenger.MessengerActivity"/>
+
         <service android:name=".thread.intentservice.MyIntentService">
             <intent-filter>
                 <action android:name="com.trampcr.is.demo"/>
             </intent-filter>
         </service>
+
+        <service android:name=".ipc.messenger.MessengerService"
+            android:process=":remote"/>
     </application>
 
 </manifest>

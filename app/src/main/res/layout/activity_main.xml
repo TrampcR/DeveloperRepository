@@ -194,4 +194,11 @@
         android:text="@string/text_rx_java_view"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btn_messenger_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_messenger_view"
+        android:textAllCaps="false" />
+
 </com.trampcr.developerrepository.customview.measureorlayout.TagLayout>
