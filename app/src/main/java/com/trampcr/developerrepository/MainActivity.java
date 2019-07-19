@@ -37,6 +37,7 @@ import com.trampcr.developerrepository.customview.touch.dispatchdemo.ViewGroupDi
 import com.trampcr.developerrepository.customview.viewpager.TwoPagerActivity;
 import com.trampcr.developerrepository.imagerepo.GlideActivity;
 import com.trampcr.developerrepository.imagerepo.PicassoActivity;
+import com.trampcr.developerrepository.ipc.aidl.BookManagerActivity;
 import com.trampcr.developerrepository.ipc.messenger.MessengerActivity;
 import com.trampcr.developerrepository.list.ForRemove;
 import com.trampcr.developerrepository.listview.ArrayAdapterActivity;
@@ -108,6 +109,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnDynamicProxyView;
     private Button mBtnRxJavaView;
     private Button mBtnMessengerView;
+    private Button mBtnAIDLView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -317,6 +319,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnDynamicProxyView = (Button) findViewById(R.id.btn_dynamic_proxy_view);
         mBtnRxJavaView = (Button) findViewById(R.id.btn_rx_java_view);
         mBtnMessengerView = (Button) findViewById(R.id.btn_messenger_view);
+        mBtnAIDLView = (Button) findViewById(R.id.btn_aidl_view);
     }
 
     private void initListener() {
@@ -348,6 +351,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnDynamicProxyView.setOnClickListener(this);
         mBtnRxJavaView.setOnClickListener(this);
         mBtnMessengerView.setOnClickListener(this);
+        mBtnAIDLView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -505,6 +509,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_messenger_view:
                 CommonUtils.startActivity(this, MessengerActivity.class);
+                break;
+            case R.id.btn_aidl_view:
+                CommonUtils.startActivity(this, BookManagerActivity.class);
                 break;
             default:
                 break;

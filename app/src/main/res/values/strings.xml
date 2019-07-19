@@ -89,5 +89,6 @@
 
     <!-- ipc -->
     <string name="text_messenger_view">Messenger View</string>
+    <string name="text_aidl_view">AIDL View</string>
 
 </resources>
