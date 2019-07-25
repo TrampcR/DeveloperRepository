@@ -112,3 +112,5 @@ Demo：ArrayAdapterActivity、SimpleAdapterActivity、BaseAdapterActivity
 1、Messenger
 
 2、AIDL
+
+3、ContentProvider

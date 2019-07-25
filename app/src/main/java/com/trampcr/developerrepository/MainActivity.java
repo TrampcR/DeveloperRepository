@@ -3,6 +3,7 @@ package com.trampcr.developerrepository;
 import android.animation.Keyframe;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
+import android.app.Activity;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Handler;
@@ -38,6 +39,7 @@ import com.trampcr.developerrepository.customview.viewpager.TwoPagerActivity;
 import com.trampcr.developerrepository.imagerepo.GlideActivity;
 import com.trampcr.developerrepository.imagerepo.PicassoActivity;
 import com.trampcr.developerrepository.ipc.aidl.BookManagerActivity;
+import com.trampcr.developerrepository.ipc.contentprovider.ContentProviderActivity;
 import com.trampcr.developerrepository.ipc.messenger.MessengerActivity;
 import com.trampcr.developerrepository.list.ForRemove;
 import com.trampcr.developerrepository.listview.ArrayAdapterActivity;
@@ -110,6 +112,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnRxJavaView;
     private Button mBtnMessengerView;
     private Button mBtnAIDLView;
+    private Button mBtnContentProviderView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -320,6 +323,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnRxJavaView = (Button) findViewById(R.id.btn_rx_java_view);
         mBtnMessengerView = (Button) findViewById(R.id.btn_messenger_view);
         mBtnAIDLView = (Button) findViewById(R.id.btn_aidl_view);
+        mBtnContentProviderView = (Button) findViewById(R.id.btn_content_provider_view);
     }
 
     private void initListener() {
@@ -352,6 +356,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnRxJavaView.setOnClickListener(this);
         mBtnMessengerView.setOnClickListener(this);
         mBtnAIDLView.setOnClickListener(this);
+        mBtnContentProviderView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -512,6 +517,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_aidl_view:
                 CommonUtils.startActivity(this, BookManagerActivity.class);
+                break;
+            case R.id.btn_content_provider_view:
+                CommonUtils.startActivity(this, ContentProviderActivity.class);
                 break;
             default:
                 break;

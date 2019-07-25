@@ -70,6 +70,8 @@
 
         <activity android:name=".ipc.aidl.BookManagerActivity"/>
 
+        <activity android:name=".ipc.contentprovider.ContentProviderActivity"/>
+
         <service android:name=".thread.intentservice.MyIntentService">
             <intent-filter>
                 <action android:name="com.trampcr.is.demo"/>
@@ -81,6 +83,11 @@
 
         <service android:name=".ipc.aidl.BookManagerService"
             android:process=":remote"/>
+
+        <provider
+            android:authorities="com.trampcr.developerrepository.book.provider"
+            android:name=".ipc.contentprovider.BookProvider"
+            android:process=":provider"/>
     </application>
 
 </manifest>

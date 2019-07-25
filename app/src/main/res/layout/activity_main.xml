@@ -208,4 +208,11 @@
         android:text="@string/text_aidl_view"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btn_content_provider_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_content_provider_view"
+        android:textAllCaps="false" />
+
 </com.trampcr.developerrepository.customview.measureorlayout.TagLayout>
