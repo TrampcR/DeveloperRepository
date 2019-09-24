@@ -3,7 +3,6 @@ package com.trampcr.developerrepository;
 import android.animation.Keyframe;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
-import android.app.Activity;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Handler;
@@ -45,6 +44,7 @@ import com.trampcr.developerrepository.list.ForRemove;
 import com.trampcr.developerrepository.listview.ArrayAdapterActivity;
 import com.trampcr.developerrepository.listview.BaseAdapterActivity;
 import com.trampcr.developerrepository.listview.SimpleAdapterActivity;
+import com.trampcr.developerrepository.network.okhttp.OkHttpDemo;
 import com.trampcr.developerrepository.proxy.DynamicProxyActivity;
 import com.trampcr.developerrepository.reflect.Person;
 import com.trampcr.developerrepository.reflect.ReflectActivity;
@@ -61,16 +61,10 @@ import com.trampcr.developerrepository.utils.DimenUtils;
 import com.trampcr.developerrepository.webview.RedirectDemo;
 
 import java.io.File;
-import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 import static android.view.KeyEvent.KEYCODE_BACK;
 
@@ -145,6 +139,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        testPointView();
 //        testProvinceView();
 //        testTouchView();
+        testOkhttp();
     }
 
     private void testTouchView() {
@@ -398,19 +393,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void testOkhttp() {
-        OkHttpClient okHttpClient = new OkHttpClient();
-        Request request = new Request.Builder().url("https://www.baidu.com").build();
-        okHttpClient.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(okhttp3.Call call, IOException e) {
-
-            }
-
-            @Override
-            public void onResponse(okhttp3.Call call, Response response) throws IOException {
-
-            }
-        });
+        OkHttpDemo okHttpDemo = new OkHttpDemo();
+        okHttpDemo.get(OkHttpDemo.GET_URL);
+        String json = okHttpDemo.bowlingJson("lfy", "zxm");
+        okHttpDemo.post(OkHttpDemo.POST_URL, json);
     }
 
     @Override
