@@ -101,3 +101,16 @@ Demo：ArrayAdapterActivity、SimpleAdapterActivity、BaseAdapterActivity
 1、Retrofit
 
 - GET Request Demo
+- POST Request Demo
+
+**六、设计模式**
+
+1、动态代理：DynamicProxyActivity
+
+**七、进程间通信**
+
+1、Messenger
+
+2、AIDL
+
+3、ContentProvider

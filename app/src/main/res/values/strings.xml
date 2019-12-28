@@ -77,9 +77,19 @@
 
     <!-- network request repo -->
     <string name="text_get_request_iciba_view">Get Request Iciba View</string>
+    <string name="text_post_request_youdao_view">Post Request Youdao View</string>
 
     <!-- picture repo -->
     <string name="text_picasso_view">Picasso View</string>
     <string name="text_glide_view">Glide View</string>
+
+    <string name="text_reflect_view">Reflect View</string>
+    <string name="text_dynamic_proxy_view">Dynamic Proxy View</string>
+    <string name="text_rx_java_view">RxJava View</string>
+
+    <!-- ipc -->
+    <string name="text_messenger_view">Messenger View</string>
+    <string name="text_aidl_view">AIDL View</string>
+    <string name="text_content_provider_view">Content Provider View</string>
 
 </resources>

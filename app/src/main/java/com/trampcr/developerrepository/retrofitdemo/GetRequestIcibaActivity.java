@@ -16,12 +16,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by trampcr on 2019/6/11.
  */
 
-public class GetRequestIciba extends AppCompatActivity {
+public class GetRequestIcibaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_get_request_iciba);
+        setContentView(R.layout.activity_get_request_iciba_view);
 
         request();
     }

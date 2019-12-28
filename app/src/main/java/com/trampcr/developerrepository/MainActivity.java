@@ -37,13 +37,21 @@ import com.trampcr.developerrepository.customview.touch.dispatchdemo.ViewGroupDi
 import com.trampcr.developerrepository.customview.viewpager.TwoPagerActivity;
 import com.trampcr.developerrepository.imagerepo.GlideActivity;
 import com.trampcr.developerrepository.imagerepo.PicassoActivity;
+import com.trampcr.developerrepository.ipc.aidl.BookManagerActivity;
+import com.trampcr.developerrepository.ipc.contentprovider.ContentProviderActivity;
+import com.trampcr.developerrepository.ipc.messenger.MessengerActivity;
 import com.trampcr.developerrepository.list.ForRemove;
 import com.trampcr.developerrepository.listview.ArrayAdapterActivity;
 import com.trampcr.developerrepository.listview.BaseAdapterActivity;
 import com.trampcr.developerrepository.listview.SimpleAdapterActivity;
+import com.trampcr.developerrepository.network.okhttp.OkHttpDemo;
+import com.trampcr.developerrepository.proxy.DynamicProxyActivity;
 import com.trampcr.developerrepository.reflect.Person;
+import com.trampcr.developerrepository.reflect.ReflectActivity;
 import com.trampcr.developerrepository.reflect.ReflectHelper;
-import com.trampcr.developerrepository.retrofitdemo.GetRequestIciba;
+import com.trampcr.developerrepository.retrofitdemo.GetRequestIcibaActivity;
+import com.trampcr.developerrepository.retrofitdemo.PostRequestYouDaoActivity;
+import com.trampcr.developerrepository.rxjava.RxJavaActivity;
 import com.trampcr.developerrepository.thread.asynctask.AsyncTaskActivity;
 import com.trampcr.developerrepository.thread.handlerthread.HandlerThreadActivity;
 import com.trampcr.developerrepository.thread.intentservice.IntentServiceActivity;
@@ -53,16 +61,10 @@ import com.trampcr.developerrepository.utils.DimenUtils;
 import com.trampcr.developerrepository.webview.RedirectDemo;
 
 import java.io.File;
-import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 import static android.view.KeyEvent.KEYCODE_BACK;
 
@@ -96,8 +98,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnListSimpleAdapterView;
     private Button mBtnListBaseAdapterView;
     private Button mBtnGetRequestIcibaView;
+    private Button mBtnPostRequestYoudaoView;
     private Button mBtnPicassoView;
     private Button mBtnGlideView;
+    private Button mBtnReflectView;
+    private Button mBtnDynamicProxyView;
+    private Button mBtnRxJavaView;
+    private Button mBtnMessengerView;
+    private Button mBtnAIDLView;
+    private Button mBtnContentProviderView;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -130,6 +139,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        testPointView();
 //        testProvinceView();
 //        testTouchView();
+        testOkhttp();
     }
 
     private void testTouchView() {
@@ -300,8 +310,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnListSimpleAdapterView = (Button) findViewById(R.id.btn_list_simple_adapter_view);
         mBtnListBaseAdapterView = (Button) findViewById(R.id.btn_list_base_adapter_view);
         mBtnGetRequestIcibaView = (Button) findViewById(R.id.btn_get_request_iciba_view);
+        mBtnPostRequestYoudaoView = (Button) findViewById(R.id.btn_post_request_youdao_view);
         mBtnPicassoView = (Button) findViewById(R.id.btn_picasso_view);
         mBtnGlideView = (Button) findViewById(R.id.btn_glide_view);
+        mBtnReflectView = (Button) findViewById(R.id.btn_reflect_view);
+        mBtnDynamicProxyView = (Button) findViewById(R.id.btn_dynamic_proxy_view);
+        mBtnRxJavaView = (Button) findViewById(R.id.btn_rx_java_view);
+        mBtnMessengerView = (Button) findViewById(R.id.btn_messenger_view);
+        mBtnAIDLView = (Button) findViewById(R.id.btn_aidl_view);
+        mBtnContentProviderView = (Button) findViewById(R.id.btn_content_provider_view);
     }
 
     private void initListener() {
@@ -326,8 +343,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnListSimpleAdapterView.setOnClickListener(this);
         mBtnListBaseAdapterView.setOnClickListener(this);
         mBtnGetRequestIcibaView.setOnClickListener(this);
+        mBtnPostRequestYoudaoView.setOnClickListener(this);
         mBtnPicassoView.setOnClickListener(this);
         mBtnGlideView.setOnClickListener(this);
+        mBtnReflectView.setOnClickListener(this);
+        mBtnDynamicProxyView.setOnClickListener(this);
+        mBtnRxJavaView.setOnClickListener(this);
+        mBtnMessengerView.setOnClickListener(this);
+        mBtnAIDLView.setOnClickListener(this);
+        mBtnContentProviderView.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -369,19 +393,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void testOkhttp() {
-        OkHttpClient okHttpClient = new OkHttpClient();
-        Request request = new Request.Builder().url("https://www.baidu.com").build();
-        okHttpClient.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(okhttp3.Call call, IOException e) {
-
-            }
-
-            @Override
-            public void onResponse(okhttp3.Call call, Response response) throws IOException {
-
-            }
-        });
+        OkHttpDemo okHttpDemo = new OkHttpDemo();
+        okHttpDemo.get(OkHttpDemo.GET_URL);
+        String json = okHttpDemo.bowlingJson("lfy", "zxm");
+        okHttpDemo.post(OkHttpDemo.POST_URL, json);
     }
 
     @Override
@@ -463,13 +478,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 CommonUtils.startActivity(this, BaseAdapterActivity.class);
                 break;
             case R.id.btn_get_request_iciba_view:
-                CommonUtils.startActivity(this, GetRequestIciba.class);
+                CommonUtils.startActivity(this, GetRequestIcibaActivity.class);
+                break;
+            case R.id.btn_post_request_youdao_view:
+                CommonUtils.startActivity(this, PostRequestYouDaoActivity.class);
                 break;
             case R.id.btn_picasso_view:
                 CommonUtils.startActivity(this, PicassoActivity.class);
                 break;
             case R.id.btn_glide_view:
                 CommonUtils.startActivity(this, GlideActivity.class);
+                break;
+            case R.id.btn_reflect_view:
+                CommonUtils.startActivity(this, ReflectActivity.class);
+                break;
+            case R.id.btn_dynamic_proxy_view:
+                CommonUtils.startActivity(this, DynamicProxyActivity.class);
+                break;
+            case R.id.btn_rx_java_view:
+                CommonUtils.startActivity(this, RxJavaActivity.class);
+                break;
+            case R.id.btn_messenger_view:
+                CommonUtils.startActivity(this, MessengerActivity.class);
+                break;
+            case R.id.btn_aidl_view:
+                CommonUtils.startActivity(this, BookManagerActivity.class);
+                break;
+            case R.id.btn_content_provider_view:
+                CommonUtils.startActivity(this, ContentProviderActivity.class);
                 break;
             default:
                 break;

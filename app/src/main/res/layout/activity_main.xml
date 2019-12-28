@@ -154,6 +154,12 @@
         android:textAllCaps="false" />
 
     <Button
+        android:id="@+id/btn_post_request_youdao_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_post_request_youdao_view"/>
+
+        <Button
         android:id="@+id/btn_picasso_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -165,6 +171,48 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_glide_view"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_reflect_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_reflect_view"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_dynamic_proxy_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_dynamic_proxy_view"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_rx_java_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_rx_java_view"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_messenger_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_messenger_view"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_aidl_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_aidl_view"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_content_provider_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_content_provider_view"
         android:textAllCaps="false" />
 
 </com.trampcr.developerrepository.customview.measureorlayout.TagLayout>
