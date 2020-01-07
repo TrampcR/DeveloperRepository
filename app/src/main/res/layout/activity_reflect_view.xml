@@ -4,11 +4,10 @@
     android:layout_height="match_parent"
     android:padding="10dp">
 
-    <ListView
-        android:id="@+id/list_array_adapter"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:divider="#123456"
-        android:dividerHeight="2dp"/>
+    <ImageView
+        android:id="@+id/img_girl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/girl"/>
 
 </LinearLayout>

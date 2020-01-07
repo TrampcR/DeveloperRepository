@@ -44,8 +44,8 @@ import com.trampcr.developerrepository.list.ForRemove;
 import com.trampcr.developerrepository.listview.ArrayAdapterActivity;
 import com.trampcr.developerrepository.listview.BaseAdapterActivity;
 import com.trampcr.developerrepository.listview.SimpleAdapterActivity;
-import com.trampcr.developerrepository.network.okhttp.OkHttpDemo;
 import com.trampcr.developerrepository.proxy.DynamicProxyActivity;
+import com.trampcr.developerrepository.proxy.dynamic.DynamicProxyDemo;
 import com.trampcr.developerrepository.reflect.Person;
 import com.trampcr.developerrepository.reflect.ReflectActivity;
 import com.trampcr.developerrepository.reflect.ReflectHelper;
@@ -139,7 +139,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        testPointView();
 //        testProvinceView();
 //        testTouchView();
-        testOkhttp();
+//        testOkhttp();
+//        new DynamicProxyDemo().testDynamicProxy();
     }
 
     private void testTouchView() {
@@ -393,10 +394,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void testOkhttp() {
-        OkHttpDemo okHttpDemo = new OkHttpDemo();
-        okHttpDemo.get(OkHttpDemo.GET_URL);
-        String json = okHttpDemo.bowlingJson("lfy", "zxm");
-        okHttpDemo.post(OkHttpDemo.POST_URL, json);
+//        OkHttpDemo okHttpDemo = new OkHttpDemo();
+//        okHttpDemo.get(OkHttpDemo.GET_URL);
+//        String json = okHttpDemo.bowlingJson("lfy", "zxm");
+//        okHttpDemo.post(OkHttpDemo.POST_URL, json);
     }
 
     @Override

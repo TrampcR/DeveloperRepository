@@ -1,9 +1,13 @@
 package com.trampcr.developerrepository.reflect;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.trampcr.developerrepository.R;
 
@@ -13,12 +17,17 @@ import java.lang.reflect.Method;
 
 public class ReflectActivity extends AppCompatActivity {
     public static final String TAG = ReflectActivity.class.getSimpleName();
+    private ImageView imageView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_reflect_view);
+        imageView = (ImageView) findViewById(R.id.img_girl);
+
+        Log.d(TAG, "onCreate: visiable = " + imageView.getVisibility());
+        Log.d(TAG, "onCreate: isShown = " + imageView.isShown());
 
         reflect();
     }
