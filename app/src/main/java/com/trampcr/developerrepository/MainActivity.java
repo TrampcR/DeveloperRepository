@@ -35,6 +35,12 @@ import com.trampcr.developerrepository.customview.touch.SelfMultiTouchActivity;
 import com.trampcr.developerrepository.customview.touch.TouchView;
 import com.trampcr.developerrepository.customview.touch.dispatchdemo.ViewGroupDispatchActivity;
 import com.trampcr.developerrepository.customview.viewpager.TwoPagerActivity;
+import com.trampcr.developerrepository.designpatterns.productconsume.ConsumeThread;
+import com.trampcr.developerrepository.designpatterns.productconsume.ProductThread;
+import com.trampcr.developerrepository.designpatterns.productconsume.PublicQueue;
+import com.trampcr.developerrepository.designpatterns.productconsume.PublicQueueFromBlocking;
+import com.trampcr.developerrepository.designpatterns.productconsume.PublicQueueFromLock;
+import com.trampcr.developerrepository.designpatterns.productconsume.PublicQueueFromSyn;
 import com.trampcr.developerrepository.imagerepo.GlideActivity;
 import com.trampcr.developerrepository.imagerepo.PicassoActivity;
 import com.trampcr.developerrepository.ipc.aidl.BookManagerActivity;
@@ -141,6 +147,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        testTouchView();
 //        testOkhttp();
 //        new DynamicProxyDemo().testDynamicProxy();
+//        testProductConsume();
+    }
+
+    /**
+     * 生产者消费者 test demo
+     * 三种形式实现
+     */
+    private void testProductConsume() {
+        // PublicQueue publicQueue = new PublicQueueFromSyn();
+        // PublicQueue publicQueue = new PublicQueueFromLock();
+        PublicQueue publicQueue = new PublicQueueFromBlocking();
+        ProductThread productThread = new ProductThread(publicQueue);
+        ConsumeThread consumeThread = new ConsumeThread(publicQueue);
+        productThread.start();
+        consumeThread.start();
     }
 
     private void testTouchView() {
