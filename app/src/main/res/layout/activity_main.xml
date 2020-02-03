@@ -215,4 +215,25 @@
         android:text="@string/text_content_provider_view"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btn_mvc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_mvc"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_mvp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_mvp"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_mvvm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_mvvm"
+        android:textAllCaps="false" />
+
 </com.trampcr.developerrepository.customview.measureorlayout.TagLayout>

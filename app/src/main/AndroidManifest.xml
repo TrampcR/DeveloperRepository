@@ -72,6 +72,12 @@
 
         <activity android:name=".ipc.contentprovider.ContentProviderActivity"/>
 
+        <activity android:name=".architecture.mvc.controller.MvcActivity"/>
+
+        <activity android:name=".architecture.mvp.view.MvpActivity"/>
+
+        <activity android:name=".architecture.mvvm.view.MvvmActivity"/>
+
         <service android:name=".thread.intentservice.MyIntentService">
             <intent-filter>
                 <action android:name="com.trampcr.is.demo"/>

@@ -20,6 +20,9 @@ import android.widget.Toast;
 
 import com.dianping.logan.Logan;
 import com.dianping.logan.LoganConfig;
+import com.trampcr.developerrepository.architecture.mvc.controller.MvcActivity;
+import com.trampcr.developerrepository.architecture.mvp.view.MvpActivity;
+import com.trampcr.developerrepository.architecture.mvvm.view.MvvmActivity;
 import com.trampcr.developerrepository.customview.CameraAnimationView;
 import com.trampcr.developerrepository.customview.drag.DragHelperActivity;
 import com.trampcr.developerrepository.customview.drag.DragListenerActivity;
@@ -113,6 +116,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnMessengerView;
     private Button mBtnAIDLView;
     private Button mBtnContentProviderView;
+    private Button mBtnMvc;
+    private Button mBtnMvp;
+    private Button mBtnMvvm;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -341,6 +347,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnMessengerView = (Button) findViewById(R.id.btn_messenger_view);
         mBtnAIDLView = (Button) findViewById(R.id.btn_aidl_view);
         mBtnContentProviderView = (Button) findViewById(R.id.btn_content_provider_view);
+        mBtnMvc = (Button) findViewById(R.id.btn_mvc);
+        mBtnMvp = (Button) findViewById(R.id.btn_mvp);
+        mBtnMvvm = (Button) findViewById(R.id.btn_mvvm);
     }
 
     private void initListener() {
@@ -374,6 +383,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnMessengerView.setOnClickListener(this);
         mBtnAIDLView.setOnClickListener(this);
         mBtnContentProviderView.setOnClickListener(this);
+        mBtnMvc.setOnClickListener(this);
+        mBtnMvp.setOnClickListener(this);
+        mBtnMvvm.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -528,6 +540,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_content_provider_view:
                 CommonUtils.startActivity(this, ContentProviderActivity.class);
+                break;
+            case R.id.btn_mvc:
+                CommonUtils.startActivity(this, MvcActivity.class);
+                break;
+            case R.id.btn_mvp:
+                CommonUtils.startActivity(this, MvpActivity.class);
+                break;
+            case R.id.btn_mvvm:
+                CommonUtils.startActivity(this, MvvmActivity.class);
                 break;
             default:
                 break;

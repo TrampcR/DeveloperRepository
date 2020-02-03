@@ -92,4 +92,9 @@
     <string name="text_aidl_view">AIDL View</string>
     <string name="text_content_provider_view">Content Provider View</string>
 
+    <!-- architecture -->
+    <string name="text_mvc">Mvc</string>
+    <string name="text_mvp">Mvp</string>
+    <string name="text_mvvm">Mvvm</string>
+
 </resources>
