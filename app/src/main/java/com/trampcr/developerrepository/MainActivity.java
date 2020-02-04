@@ -53,6 +53,7 @@ import com.trampcr.developerrepository.list.ForRemove;
 import com.trampcr.developerrepository.listview.ArrayAdapterActivity;
 import com.trampcr.developerrepository.listview.BaseAdapterActivity;
 import com.trampcr.developerrepository.listview.SimpleAdapterActivity;
+import com.trampcr.developerrepository.plugin.HostActivity;
 import com.trampcr.developerrepository.proxy.DynamicProxyActivity;
 import com.trampcr.developerrepository.proxy.dynamic.DynamicProxyDemo;
 import com.trampcr.developerrepository.reflect.Person;
@@ -119,6 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnMvc;
     private Button mBtnMvp;
     private Button mBtnMvvm;
+    private Button mBtnHost;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -342,14 +344,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnPicassoView = (Button) findViewById(R.id.btn_picasso_view);
         mBtnGlideView = (Button) findViewById(R.id.btn_glide_view);
         mBtnReflectView = (Button) findViewById(R.id.btn_reflect_view);
-        mBtnDynamicProxyView = (Button) findViewById(R.id.btn_dynamic_proxy_view);
-        mBtnRxJavaView = (Button) findViewById(R.id.btn_rx_java_view);
-        mBtnMessengerView = (Button) findViewById(R.id.btn_messenger_view);
-        mBtnAIDLView = (Button) findViewById(R.id.btn_aidl_view);
-        mBtnContentProviderView = (Button) findViewById(R.id.btn_content_provider_view);
-        mBtnMvc = (Button) findViewById(R.id.btn_mvc);
-        mBtnMvp = (Button) findViewById(R.id.btn_mvp);
-        mBtnMvvm = (Button) findViewById(R.id.btn_mvvm);
+//        mBtnDynamicProxyView = (Button) findViewById(R.id.btn_dynamic_proxy_view);
+//        mBtnRxJavaView = (Button) findViewById(R.id.btn_rx_java_view);
+//        mBtnMessengerView = (Button) findViewById(R.id.btn_messenger_view);
+//        mBtnAIDLView = (Button) findViewById(R.id.btn_aidl_view);
+//        mBtnContentProviderView = (Button) findViewById(R.id.btn_content_provider_view);
+//        mBtnMvc = (Button) findViewById(R.id.btn_mvc);
+//        mBtnMvp = (Button) findViewById(R.id.btn_mvp);
+//        mBtnMvvm = (Button) findViewById(R.id.btn_mvvm);
+        mBtnHost = (Button) findViewById(R.id.btn_host);
     }
 
     private void initListener() {
@@ -378,14 +381,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnPicassoView.setOnClickListener(this);
         mBtnGlideView.setOnClickListener(this);
         mBtnReflectView.setOnClickListener(this);
-        mBtnDynamicProxyView.setOnClickListener(this);
-        mBtnRxJavaView.setOnClickListener(this);
-        mBtnMessengerView.setOnClickListener(this);
-        mBtnAIDLView.setOnClickListener(this);
-        mBtnContentProviderView.setOnClickListener(this);
-        mBtnMvc.setOnClickListener(this);
-        mBtnMvp.setOnClickListener(this);
-        mBtnMvvm.setOnClickListener(this);
+//        mBtnDynamicProxyView.setOnClickListener(this);
+//        mBtnRxJavaView.setOnClickListener(this);
+//        mBtnMessengerView.setOnClickListener(this);
+//        mBtnAIDLView.setOnClickListener(this);
+//        mBtnContentProviderView.setOnClickListener(this);
+//        mBtnMvc.setOnClickListener(this);
+//        mBtnMvp.setOnClickListener(this);
+//        mBtnMvvm.setOnClickListener(this);
+        mBtnHost.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -526,29 +530,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_reflect_view:
                 CommonUtils.startActivity(this, ReflectActivity.class);
                 break;
-            case R.id.btn_dynamic_proxy_view:
-                CommonUtils.startActivity(this, DynamicProxyActivity.class);
-                break;
-            case R.id.btn_rx_java_view:
-                CommonUtils.startActivity(this, RxJavaActivity.class);
-                break;
-            case R.id.btn_messenger_view:
-                CommonUtils.startActivity(this, MessengerActivity.class);
-                break;
-            case R.id.btn_aidl_view:
-                CommonUtils.startActivity(this, BookManagerActivity.class);
-                break;
-            case R.id.btn_content_provider_view:
-                CommonUtils.startActivity(this, ContentProviderActivity.class);
-                break;
-            case R.id.btn_mvc:
-                CommonUtils.startActivity(this, MvcActivity.class);
-                break;
-            case R.id.btn_mvp:
-                CommonUtils.startActivity(this, MvpActivity.class);
-                break;
-            case R.id.btn_mvvm:
-                CommonUtils.startActivity(this, MvvmActivity.class);
+//            case R.id.btn_dynamic_proxy_view:
+//                CommonUtils.startActivity(this, DynamicProxyActivity.class);
+//                break;
+//            case R.id.btn_rx_java_view:
+//                CommonUtils.startActivity(this, RxJavaActivity.class);
+//                break;
+//            case R.id.btn_messenger_view:
+//                CommonUtils.startActivity(this, MessengerActivity.class);
+//                break;
+//            case R.id.btn_aidl_view:
+//                CommonUtils.startActivity(this, BookManagerActivity.class);
+//                break;
+//            case R.id.btn_content_provider_view:
+//                CommonUtils.startActivity(this, ContentProviderActivity.class);
+//                break;
+//            case R.id.btn_mvc:
+//                CommonUtils.startActivity(this, MvcActivity.class);
+//                break;
+//            case R.id.btn_mvp:
+//                CommonUtils.startActivity(this, MvpActivity.class);
+//                break;
+//            case R.id.btn_mvvm:
+//                CommonUtils.startActivity(this, MvvmActivity.class);
+//                break;
+            case R.id.btn_host:
+                CommonUtils.startActivity(this, HostActivity.class);
                 break;
             default:
                 break;

@@ -62,21 +62,23 @@
 
         <activity android:name=".reflect.ReflectActivity"/>
 
-        <activity android:name=".proxy.DynamicProxyActivity"/>
+        <!--<activity android:name=".proxy.DynamicProxyActivity"/>-->
 
-        <activity android:name=".rxjava.RxJavaActivity"/>
+        <!--<activity android:name=".rxjava.RxJavaActivity"/>-->
 
-        <activity android:name=".ipc.messenger.MessengerActivity"/>
+        <!--<activity android:name=".ipc.messenger.MessengerActivity"/>-->
 
-        <activity android:name=".ipc.aidl.BookManagerActivity"/>
+        <!--<activity android:name=".ipc.aidl.BookManagerActivity"/>-->
 
-        <activity android:name=".ipc.contentprovider.ContentProviderActivity"/>
+        <!--<activity android:name=".ipc.contentprovider.ContentProviderActivity"/>-->
 
-        <activity android:name=".architecture.mvc.controller.MvcActivity"/>
+        <!--<activity android:name=".architecture.mvc.controller.MvcActivity"/>-->
 
-        <activity android:name=".architecture.mvp.view.MvpActivity"/>
+        <!--<activity android:name=".architecture.mvp.view.MvpActivity"/>-->
 
-        <activity android:name=".architecture.mvvm.view.MvvmActivity"/>
+        <!--<activity android:name=".architecture.mvvm.view.MvvmActivity"/>-->
+
+        <activity android:name=".plugin.HostActivity"/>
 
         <service android:name=".thread.intentservice.MyIntentService">
             <intent-filter>
