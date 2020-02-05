@@ -97,6 +97,8 @@
     <string name="text_mvp">Mvp</string>
     <string name="text_mvvm">Mvvm</string>
 
+    <!-- plugin -->
     <string name="text_host">Host</string>
+    <string name="text_hotfix">Hotfix</string>
 
 </resources>

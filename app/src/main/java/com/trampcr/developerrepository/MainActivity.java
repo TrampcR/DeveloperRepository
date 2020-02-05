@@ -54,6 +54,7 @@ import com.trampcr.developerrepository.listview.ArrayAdapterActivity;
 import com.trampcr.developerrepository.listview.BaseAdapterActivity;
 import com.trampcr.developerrepository.listview.SimpleAdapterActivity;
 import com.trampcr.developerrepository.plugin.HostActivity;
+import com.trampcr.developerrepository.plugin.HotFixActivity;
 import com.trampcr.developerrepository.proxy.DynamicProxyActivity;
 import com.trampcr.developerrepository.proxy.dynamic.DynamicProxyDemo;
 import com.trampcr.developerrepository.reflect.Person;
@@ -121,6 +122,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnMvp;
     private Button mBtnMvvm;
     private Button mBtnHost;
+    private Button mBtnHotfix;
 
     private WebView mWebView;
     private Handler mHandler;
@@ -353,6 +355,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        mBtnMvp = (Button) findViewById(R.id.btn_mvp);
 //        mBtnMvvm = (Button) findViewById(R.id.btn_mvvm);
         mBtnHost = (Button) findViewById(R.id.btn_host);
+        mBtnHotfix = (Button) findViewById(R.id.btn_hotfix);
     }
 
     private void initListener() {
@@ -390,6 +393,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        mBtnMvp.setOnClickListener(this);
 //        mBtnMvvm.setOnClickListener(this);
         mBtnHost.setOnClickListener(this);
+        mBtnHotfix.setOnClickListener(this);
     }
 
     private void testWebView() {
@@ -556,6 +560,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                break;
             case R.id.btn_host:
                 CommonUtils.startActivity(this, HostActivity.class);
+                break;
+            case R.id.btn_hotfix:
+                CommonUtils.startActivity(this, HotFixActivity.class);
                 break;
             default:
                 break;
