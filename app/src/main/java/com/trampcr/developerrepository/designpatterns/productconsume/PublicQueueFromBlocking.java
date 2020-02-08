@@ -3,9 +3,7 @@ package com.trampcr.developerrepository.designpatterns.productconsume;
 import android.util.Log;
 
 import java.util.concurrent.BlockingDeque;
-import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingDeque;
-import java.util.concurrent.LinkedBlockingQueue;
 
 public class PublicQueueFromBlocking<T> extends PublicQueue<T> {
     public static final String TAG = PublicQueueFromBlocking.class.getSimpleName();

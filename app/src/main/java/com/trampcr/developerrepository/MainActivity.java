@@ -44,6 +44,10 @@ import com.trampcr.developerrepository.designpatterns.productconsume.PublicQueue
 import com.trampcr.developerrepository.designpatterns.productconsume.PublicQueueFromBlocking;
 import com.trampcr.developerrepository.designpatterns.productconsume.PublicQueueFromLock;
 import com.trampcr.developerrepository.designpatterns.productconsume.PublicQueueFromSyn;
+import com.trampcr.developerrepository.designpatterns.productconsume.base.Model;
+import com.trampcr.developerrepository.designpatterns.productconsume.blocking.BlockingQueueModel;
+import com.trampcr.developerrepository.designpatterns.productconsume.lockcondition.LockConditionModel;
+import com.trampcr.developerrepository.designpatterns.productconsume.waitnotify.WaitNotifyModel;
 import com.trampcr.developerrepository.imagerepo.GlideActivity;
 import com.trampcr.developerrepository.imagerepo.PicassoActivity;
 import com.trampcr.developerrepository.ipc.aidl.BookManagerActivity;
@@ -158,6 +162,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        testOkhttp();
 //        new DynamicProxyDemo().testDynamicProxy();
 //        testProductConsume();
+//        testProductConsume2();
+    }
+
+    private void testProductConsume2() {
+//        Model model = new BlockingQueueModel(3);
+//        Model model = new WaitNotifyModel(3);
+        Model model = new LockConditionModel(3);
+        for (int i = 0; i < 2; i++) {
+            new Thread(model.newRunnableConsumer()).start();
+        }
+
+        for (int i = 0; i < 5; i++) {
+            new Thread(model.newRunnableProducer()).start();
+        }
     }
 
     /**
