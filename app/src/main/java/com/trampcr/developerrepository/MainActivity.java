@@ -3,6 +3,7 @@ package com.trampcr.developerrepository;
 import android.animation.Keyframe;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
+import android.app.Activity;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Handler;
@@ -20,6 +21,14 @@ import android.widget.Toast;
 
 import com.dianping.logan.Logan;
 import com.dianping.logan.LoganConfig;
+import com.trampcr.developerrepository.algorithm.sort.BubbleSort;
+import com.trampcr.developerrepository.algorithm.sort.ChoiceSort;
+import com.trampcr.developerrepository.algorithm.sort.HeapSort;
+import com.trampcr.developerrepository.algorithm.sort.InsertSort;
+import com.trampcr.developerrepository.algorithm.sort.MergeSort;
+import com.trampcr.developerrepository.algorithm.sort.QuickSort;
+import com.trampcr.developerrepository.algorithm.tree.TreeNode;
+import com.trampcr.developerrepository.algorithm.tree.TreeTraverse;
 import com.trampcr.developerrepository.architecture.mvc.controller.MvcActivity;
 import com.trampcr.developerrepository.architecture.mvp.view.MvpActivity;
 import com.trampcr.developerrepository.architecture.mvvm.view.MvvmActivity;
@@ -80,6 +89,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.List;
 
 import static android.view.KeyEvent.KEYCODE_BACK;
 
@@ -163,6 +173,67 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        new DynamicProxyDemo().testDynamicProxy();
 //        testProductConsume();
 //        testProductConsume2();
+//        testSort();
+//        testTree();
+    }
+
+    private void testTree() {
+        TreeNode node = new TreeNode(12);
+        node.add(new TreeNode(8));
+        node.add(new TreeNode(9));
+        node.add(new TreeNode(5));
+        node.add(new TreeNode(15));
+        node.add(new TreeNode(20));
+        node.add(new TreeNode(7));
+
+        TreeTraverse treeTraverse = new TreeTraverse();
+        List<Integer> preList = treeTraverse.preOrder(node);
+        List<Integer> preList1 = treeTraverse.preOrder1(node);
+        List<Integer> midList = treeTraverse.midOrder(node);
+        List<Integer> midList1 = treeTraverse.midOrder1(node);
+        List<Integer> postList = treeTraverse.postOrder(node);
+        List<Integer> postList1 = treeTraverse.postOrder1(node);
+        List<Integer> layerTraverseList = treeTraverse.layerTraverse(node);
+        for (int i = 0; i < preList.size(); i++) {
+            Log.d(TAG, "testTree: pre = " + preList.get(i));
+        }
+
+        for (int i = 0; i < preList1.size(); i++) {
+            Log.d(TAG, "testTree: pre 1 = " + preList1.get(i));
+        }
+
+        for (int i = 0; i < midList.size(); i++) {
+            Log.d(TAG, "testTree: mid = " + midList.get(i));
+        }
+
+        for (int i = 0; i < midList1.size(); i++) {
+            Log.d(TAG, "testTree: mid 1 = " + midList1.get(i));
+        }
+
+        for (int i = 0; i < postList.size(); i++) {
+            Log.d(TAG, "testTree: post = " + postList.get(i));
+        }
+
+        for (int i = 0; i < postList1.size(); i++) {
+            Log.d(TAG, "testTree: post 1 = " + postList1.get(i));
+        }
+
+        for (int i = 0; i < layerTraverseList.size(); i++) {
+            Log.d(TAG, "testTree: layer = " + layerTraverseList.get(i));
+        }
+    }
+
+    private void testSort() {
+        int[] arr = {3, 5, 2, 6, 1, 4};
+//        int[] result = BubbleSort.bubbleSort(arr);
+//        int[] result = InsertSort.innerSort(arr);
+//        int[] result = ChoiceSort.choiceSort(arr);
+//        int[] result = MergeSort.mergeSort(arr);
+//        int[] result = QuickSort.quickSort(arr);
+        int[] result = HeapSort.heapSort(arr);
+        for (int i = 0; i < result.length; i++) {
+            Log.d(TAG, "testSort: i = " + i + ", result = " + result[i]);
+        }
     }
 
     private void testProductConsume2() {
